@@ -1,1 +1,17 @@
-$test: 0;
+/* Ширины дисплеев */
+$mobile-min-width: 320px;
+$mobile-max-width: 767px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1279px;
+$desktop-min-width: 1280px;
+$desktop-max-width: 1920px;
+
+/* Шрифты */
+$daxline-pro: "DaxlinePro", "Helevatica", "Arial", sans-serif;
+$roboto-bold: "Roboto Bold", "Helevatica", "Arial", sans-serif;
+
+/* Глобальная область */
+$body-fs: 14px;
+$body-lh: 1.5;
+$body-fc: #323232;
+$body-bg: #ffffff;
