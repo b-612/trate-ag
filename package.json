@@ -5,7 +5,7 @@
   "description": "Тестовое задание на соискание должности верстальщика в компанию Пиксель Плюс",
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
     "start": "gulp start"
@@ -21,7 +21,7 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/scss/**/*.{sass,scss}"
+    "source/sass/**/*.{sass,scss}"
   ],
   "devDependencies": {
     "autoprefixer": "^9.7.1",
