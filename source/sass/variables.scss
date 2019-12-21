@@ -3,18 +3,20 @@ $mobile-min-width: 320px;
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
 $tablet-max-width: 1279px;
-$desktop-min-width: 1280px;
+$desktop-min-width: 1320px;
 $desktop-max-width: 1920px;
 
 /* Шрифты */
 $daxline-pro: "DaxlinePro", "Helevatica", "Arial", sans-serif;
 $roboto-bold: "Roboto Bold", "Helevatica", "Arial", sans-serif;
+$roboto-regular: "Roboto", "Helevatica", "Arial", sans-serif;
 
 /* Глобальная область */
 $body-fs: 14px;
 $body-lh: 1.5;
 $body-fc: #323232;
 $body-bg: #ffffff;
+$container-max-width: 1320px;
 
 /* Верхняя полоса хедера */
 $top-line-bg: #ececec;
@@ -25,3 +27,28 @@ $account-lh: 1.2;
 
 /* Иконки соц. сетей */
 $socials-shadow-color: rgba(155, 155, 155, 0.7);
+
+/* Инфо блок в хедере */
+$main-title-fs: 16px;
+$main-title-fc: #a6a7a1;
+$main-title-lh: 1.2;
+
+/* Кнопка (ссылка) с обводкой */
+$button-fs: 16px;
+$button-fc: #323232;
+$button-fc-hover: #ffffff;
+$button-lh: 1.2;
+$button-border-color: #e33439;
+$button-bg-hover: #e33439;
+$button-bg-active: #d4262b;
+
+/* Номера телефонов */
+$phone-fs: 22px;
+$phone-lh: 1.2;
+$phone-fc: #323232;
+
+/* Оформить заявку */
+$request-fs: 16px;
+$request-lh: 1.2;
+$request-fc: #e33439;
+$request-fc-hover: #323232;

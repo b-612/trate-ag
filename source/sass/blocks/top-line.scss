@@ -56,6 +56,9 @@
   color: $account-fc;
   word-break: break-word;
 
+  transition-property: all;
+  transition-duration: 0.3s;
+
   &:hover,
   &:focus {
     color: $account-fc-hover;

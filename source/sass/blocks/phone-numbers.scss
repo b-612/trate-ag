@@ -1,0 +1,13 @@
+.phone-numbers {
+  max-width: 250px;
+
+  font-family: $roboto-bold;
+  font-size: $phone-fs;
+  line-height: $phone-lh;
+  font-weight: bold;
+}
+
+.phone-numbers__link {
+  color: $phone-fc;
+  letter-spacing: 0.3px;
+}

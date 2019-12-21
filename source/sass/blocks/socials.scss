@@ -6,7 +6,7 @@
 
 .socials__item {
   &:not(:first-of-type):not(:nth-of-type(12n)) {
-    margin-left: 10px;
+    margin-left: 9px;
   }
 
   @media (min-width: $desktop-min-width) {

@@ -52,8 +52,11 @@ img {
 }
 
 .container {
+  padding-left: 20px;
+  padding-right: 20px;
+
   @media (min-width: $desktop-min-width) {
-    width: 1280px;
+    width: $container-max-width;
     margin-left: auto;
     margin-right: auto;
   }

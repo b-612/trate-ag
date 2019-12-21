@@ -1,0 +1,30 @@
+.button {
+  padding-top: 14px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 11px;
+  border: 3px solid $button-border-color;
+
+  font-family: $daxline-pro;
+  font-size: $button-fs;
+  line-height: $button-lh;
+  color: $button-fc;
+  text-align: center;
+
+  background-color: transparent;
+
+  transition-property: all;
+  transition-duration: 0.4s;
+
+  &:hover,
+  &:focus {
+    color: $button-fc-hover;
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    border-color: $button-bg-active;
+    background-color: $button-bg-active;
+    transition-duration: 0s;
+  }
+}

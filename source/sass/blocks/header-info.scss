@@ -1,0 +1,123 @@
+.header-info {
+  @media (min-width: $desktop-min-width) {
+    padding-top: 33px;
+    padding-bottom: 27px;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.header-info__logo {
+  flex-shrink: 0;
+
+  @media (min-width: $desktop-min-width) {
+    margin-right: 50px;
+  }
+}
+
+.header-info__logo-image {
+  @media (min-width: $desktop-min-width) {
+    width: 171px;
+  }
+}
+
+.header-info__main-title {
+  position: relative;
+
+  font-family: $daxline-pro;
+  font-size: $main-title-fs;
+  line-height: $main-title-lh;
+  font-weight: normal;
+  font-style: normal;
+  color: $main-title-fc;
+
+  @media (min-width: $tablet-min-width) {
+    width: 280px;
+    margin-top: 7px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-right: 45px;
+  }
+}
+
+.header-info__title-image {
+  position: absolute;
+  display: inline-block;
+
+  width: 64px;
+  height: 22px;
+
+  background-image: url("../../img/root.png");
+  background-repeat: no-repeat;
+  background-position: -3px -2px;
+  background-size: 64px 22px;
+}
+
+.header-info__button {
+  flex-shrink: 0;
+
+  @media (min-width: $desktop-min-width) {
+    max-width: 188px;
+    margin-right: 24px;
+  }
+}
+
+.header-info__phone-numbers {
+  flex-shrink: 0;
+
+  @media (min-width: $desktop-min-width) {
+    margin-right: 30px;
+  }
+}
+
+.header-info__request {
+  display: flex;
+  align-items: center;
+
+  font-family: $roboto-regular;
+  font-size: $request-fs;
+  line-height: $request-lh;
+  color: $request-fc;
+  text-decoration: underline;
+  text-align: center;
+
+  @media (min-width: $desktop-min-width) {
+    max-width: 220px;
+
+    margin-top: 6px;
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus {
+    color: $request-fc-hover;
+
+    &::before {
+      background-position: 0 -37px;
+    }
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    display: block;
+    width: 36px;
+    height: 34px;
+    margin-right: 17px;
+    margin-bottom: 6px;
+
+    background-image: url("../../img/basket.svg");
+    background-repeat: no-repeat;
+    background-size: 36px 72px;
+    background-position: 0 -1px;
+  }
+}
