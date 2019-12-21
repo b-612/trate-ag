@@ -60,7 +60,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('source/img/**/*.{png,jpg,svg}')
+    return gulp.src('source/img/*.{png,jpg,svg}')
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.jpegtran({progressive: true}),
@@ -80,6 +80,9 @@ gulp.task('webp', function () {
 
 gulp.task ('svgsprite', function () {
     return gulp.src('source/img/svgsprite/*')
+        .pipe(imagemin([
+        imagemin.svgo()
+      ]))
         .pipe(svgstore({
             inlineSvg: true
         }))

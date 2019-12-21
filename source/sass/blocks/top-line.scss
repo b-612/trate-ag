@@ -1,0 +1,76 @@
+.top-line {
+  background-color: $top-line-bg;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @media (min-width: $desktop-min-width) {
+      padding-top: 13px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.top-line__account-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @media (min-width: $desktop-min-width) {
+    max-width: 515px;
+  }
+}
+
+.top-line__account-item {
+  &:not(:last-of-type) {
+    position: relative;
+
+    margin-right: 41px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 4px;
+      right: -21px;
+
+      display: block;
+      width: 1px;
+      height: 14px;
+
+      background-color: $account-fc;
+    }
+  }
+}
+
+.top-line__account-link {
+  border-bottom: 1px solid $account-fc;
+
+  font-family: $daxline-pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $account-fs;
+  line-height: $account-lh;
+  color: $account-fc;
+  word-break: break-word;
+
+  &:hover,
+  &:focus {
+    color: $account-fc-hover;
+    border-bottom-color: $account-fc-hover;
+    outline: none;
+  }
+
+  &:active {
+    border-bottom: none;
+  }
+}
+
+.top-line__socials {
+  @media (min-width: $desktop-min-width) {
+    max-width: 406px;
+    margin-left: auto;
+  }
+}
