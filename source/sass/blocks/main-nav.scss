@@ -26,6 +26,9 @@
   line-height: $main-nav-lh;
   font-weight: bold;
 
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
   &:hover,
   &:focus,
   &:focus-within {
@@ -79,9 +82,6 @@
   text-transform: uppercase;
   word-break: break-word;
 
-  transition-property: background-color;
-  transition-duration: 0.2s;
-
   @media (min-width: $desktop-min-width) {
     max-width: 320px;
   }
@@ -119,9 +119,6 @@
   padding-bottom: 14px;
 
   background-color: $main-nav-item-bg-hover;
-
-  transition-property: all;
-  transition-duration: 0.2s;
 }
 
 .main-nav__nesting-item {
@@ -137,6 +134,9 @@
   padding-right: 20px;
 
   color: $main-nav-fc;
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
 
   &:hover,
   &:focus {
