@@ -8,7 +8,7 @@
     <title>Trate. Производитель стоматологической системы имплантов ROOTT</title>
 
     <link rel="preload" href="css/normalize.min.css" as="style">
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/style.min.css" as="style">
 
     <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
@@ -219,7 +219,123 @@
       </nav>
 
       <ul class="page-header__examples implant-examples default-list container">
-        <!-- id="implant-example" -->
+        <li class="implant-examples__item implant-examples__item--rootform">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/rootform.webp">
+                <img class="implant-examples__image" src="img/rootform.png" width="36" height="85" alt="Имплантант Rootform">
+              </picture>
+              <figcaption class="implant-examples__title">
+                ROOTFORM
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--compressive-ms">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/compressive-ms.webp">
+                <img class="implant-examples__image" src="img/compressive-ms.png" width="35" height="85" alt="Имплантант Compressive MS">
+              </picture>
+              <figcaption class="implant-examples__title">
+                COMPRESSIVE
+                <span class="implant-examples__flag">MS</span>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--compressive-m">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/compressive-m.webp">
+                <img class="implant-examples__image" src="img/compressive-m.png" width="32" height="85" alt="Имплантант Compressive M">
+              </picture>
+              <figcaption class="implant-examples__title">
+                COMPRESSIVE
+                <span class="implant-examples__flag">M</span>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--compressive-mp">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/compressive-mp.webp">
+                <img class="implant-examples__image" src="img/compressive-mp.png" width="20" height="85" alt="Имплантант Compressive MP">
+              </picture>
+              <figcaption class="implant-examples__title">
+                COMPRESSIVE
+                <span class="implant-examples__flag">MP</span>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--compressive">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/compressive.webp">
+                <img class="implant-examples__image" src="img/compressive.png" width="20" height="85" alt="Имплантант Compressive">
+              </picture>
+
+              <figcaption class="implant-examples__title">
+                COMPRESSIVE
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--compressive-s">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/compressive-s.webp">
+                <img class="implant-examples__image" src="img/compressive-s.png" width="22" height="85" alt="Имплантант Compressive S">
+              </picture>
+              <figcaption class="implant-examples__title">
+                COMPRESSIVE
+                <span class="implant-examples__flag">S</span>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--basal">
+          <a class="implant-examples__link" href="#">
+            <figure class="implant-examples__image-box">
+              <picture>
+                <source type="image/webp" srcset="img/basal.webp">
+                <img class="implant-examples__image" src="img/basal.png" width="31" height="85" alt="Имплантант Basal">
+              </picture>
+              <figcaption class="implant-examples__title">
+                BASAL
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="implant-examples__item implant-examples__item--basal-ss">
+          <a class="implant-examples__link" href="#">
+          <figure class="implant-examples__image-box">
+            <picture>
+              <source type="image/webp" srcset="img/basal-ss.webp">
+              <img class="implant-examples__image" src="img/basal-ss.png" width="20" height="85" alt="Имплантант Basal SS">
+            </picture>
+            <figcaption class="implant-examples__title">
+              BASAL
+              <span class="implant-examples__flag">SS</span>
+            </figcaption>
+          </figure>
+          </a>
+        </li>
       </ul>
     </header>
 
@@ -438,24 +554,7 @@
       </ul>
     </footer>
 
-    <!-- Пример имплантанта в хедере -->
-    <template id="implant-example">
-      <li class="implant-examples__item implant-examples__item--rootform">
-        <figure>
-          <picture>
-            <source type="image/webp" srcset="#">
-            <img src="#" width="36" height="85" alt="Имплантант Template">
-          </picture>
-
-          <figcaption class="implant-examples__title">
-            Название имплантанта
-            <span class="implant-examples__flag">Метка имплантанта</span>
-          </figcaption>
-        </figure>
-      </li>
-    </template>
-
-    <!-- Слайдер Swiper -->
+    <!-- Слайд в главном слайдере-->
     <template id="swiper-slider">
       <div class="swiper-container">
         <div class="swiper-wrapper default-list">

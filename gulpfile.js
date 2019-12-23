@@ -64,7 +64,10 @@ gulp.task('css', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('source/img/*.{png,jpg,svg}', 'source/img/towebp/*')
+    return gulp.src([
+      'source/img/*.{png,jpg,svg}',
+      'source/img/towebp/*'
+    ])
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.jpegtran({progressive: true}),
