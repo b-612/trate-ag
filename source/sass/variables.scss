@@ -3,7 +3,7 @@ $mobile-min-width: 320px;
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
 $tablet-max-width: 1279px;
-$desktop-min-width: 1320px;
+$desktop-min-width: 1340px;
 $desktop-max-width: 1920px;
 
 /* Шрифты */
@@ -77,3 +77,15 @@ $basal-ss-color: #6fbbcf;
 $examples-flag-fc: #ffffff;
 $examples-fc-hover: #323232;
 $examples-fc-active: #bcbcbc;
+
+/* Слайдер */
+$slide-title-fs: 44px;
+$slide-lh: 1.4;
+$slide-title-line-color: #e33439;
+$slide-desc-fs: 16px;
+$slide-color: #323232;
+$slide-container-width-d: 1280px;
+$pagination-passive-color: #ffffff;
+$pagination-active-color: #e33439;
+$min-slider-point: 1539px;
+$max-slider-point: 1540px;

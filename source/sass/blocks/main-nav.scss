@@ -6,7 +6,7 @@
 
   .container {
     @media (min-width: $desktop-min-width) {
-      width: calc(1320px + 40px);
+      width: $container-max-width;
       padding: 0;
     }
   }
@@ -53,8 +53,11 @@
 
   &:first-of-type,
   &:nth-of-type(7n) {
+    margin-left: -15px;
+    padding-left: 15px;
+
     .main-nav__link {
-      padding-left: 40px;
+      padding-left: 21px;
     }
   }
 
@@ -63,8 +66,8 @@
     margin-right: -22px;
 
     .main-nav__link {
-      padding-right: 40px;
-      padding-left: 48px;
+      padding-right: 30px;
+      padding-left: 65px;
 
       text-align: right;
     }
@@ -114,6 +117,7 @@
 
 .main-nav__nesting-list {
   position: absolute;
+  z-index: 3;
 
   width: 100%;
   padding-bottom: 14px;

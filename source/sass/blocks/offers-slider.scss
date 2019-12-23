@@ -1,0 +1,115 @@
+.offers-slider {
+  background-color: #d0d8e3;
+
+  .offers-slider__list {
+    @media (min-width: $desktop-min-width) {
+      min-height: 620px;
+    }
+  }
+
+  .offers-slider__nav-button {
+    color: transparent;
+  }
+}
+
+.offers-slider__arrows {
+  position: absolute;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-min-width) and (max-width: $min-slider-point) {
+    position: absolute;
+    bottom: 10px;
+
+    margin-left: 50%;
+    width: 95%;
+  }
+
+  @media (min-width: $max-slider-point) {
+    top: 289px;
+    left: 50%;
+    bottom: 43px;
+
+    width: 1500px;
+
+    justify-content: flex-start;
+  }
+}
+
+.offers-slider__nav-button {
+  width: 21px;
+  height: 36px;
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/nav-slider-button.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 36px;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("../img/nav-slider-button-active.svg");
+    filter: none;
+  }
+
+  &--prev {
+    transform: rotate(-180deg);
+
+    @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
+      margin-left: 25px;
+    }
+  }
+
+  &--next {
+    @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
+      position: static;
+    }
+  }
+}
+
+.swiper-pagination-bullets {
+
+  text-align: left;
+
+  @media (min-width: $tablet-min-width) {
+    max-width: 300px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $min-slider-point) {
+    position: absolute;
+    margin-top: -49px;
+    left: 50%;
+    max-width: 300px;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $max-slider-point) {
+    margin-top: -81px;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 11px;
+
+  background-color: $pagination-passive-color;
+  opacity: 0.6;
+
+  &-active {
+    background-color: $pagination-active-color;
+    opacity: 1;
+  }
+}

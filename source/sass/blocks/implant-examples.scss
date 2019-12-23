@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1350px;
+  width: $container-max-width;
   padding: 0;
 }
 
@@ -78,9 +78,12 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    &:first-of-type,
-    &:nth-of-type(9n) {
-      margin-left: 10px;
+    width: 135px;
+    margin-left: 15px;
+    margin-right: 17px;
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
@@ -99,11 +102,6 @@
 
 .implant-examples__image {
   width: 100%;
-
-  @media (min-width: $desktop-min-width) {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
 }
 
 .implant-examples__title {

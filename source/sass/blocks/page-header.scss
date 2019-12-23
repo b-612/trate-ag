@@ -1,5 +1,9 @@
 .page-header {
   display: block;
+
+  @media (min-width: $desktop-min-width) {
+    padding-bottom: 13px;
+  }
 }
 
 .page-header__main-nav {
