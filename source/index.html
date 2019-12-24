@@ -346,55 +346,6 @@
       <section class="offers">
         <h2 class="visually-hidden">Предложения</h2>
 
-        <div class="swiper-container offers-slider">
-          <div class="offers-slider__arrows">
-            <button class="swiper-button-prev offers-slider__nav-button offers-slider__nav-button--prev" type="button">
-              <span class="visually-hidden">Предыдущий слайд</span>
-            </button>
-
-            <button class="swiper-button-next offers-slider__nav-button" type="button">
-              <span class="visually-hidden">Следующий слайд</span>
-            </button>
-          </div>
-
-          <ul class="swiper-wrapper offers-slider__list default-list">
-            <li class="swiper-slide offers-slide" style="background-image: url('img/slide-1-desk.png')">
-              <div class="container">
-                <h3 class="offers-slide__title">Стартовый набор</h3>
-                <p class="offers-slide__description">Хирургический набор с универсальными свёрлами</p>
-                <a class="offers-slide__link button" href="#">Посмотреть</a>
-              </div>
-            </li>
-
-            <li class="swiper-slide offers-slide" style="background-image: url('img/slide-1-desk.png')">
-              <div class="container">
-                <h3 class="offers-slide__title">Стартовый набор</h3>
-                <p class="offers-slide__description">Хирургический набор с универсальными свёрлами</p>
-                <a class="offers-slide__link button" href="#">Посмотреть</a>
-              </div>
-            </li>
-
-            <li class="swiper-slide offers-slide" style="background-image: url('img/slide-1-desk.png')">
-              <div class="container">
-                <h3 class="offers-slide__title">Стартовый набор</h3>
-                <p class="offers-slide__description">Хирургический набор с универсальными свёрлами</p>
-                <a class="offers-slide__link button" href="#">Посмотреть</a>
-              </div>
-            </li>
-
-            <li class="swiper-slide offers-slide" style="background-image: url('img/slide-1-desk.png')">
-              <div class="container">
-                <h3 class="offers-slide__title">Стартовый набор</h3>
-                <p class="offers-slide__description">Хирургический набор с универсальными свёрлами</p>
-                <a class="offers-slide__link button" href="#">Посмотреть</a>
-              </div>
-            </li>
-          </ul>
-
-          <div class="container">
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
       </section>
 
       <section class="main-products">
@@ -610,19 +561,19 @@
     <!-- Слайдер Swiper-->
     <template id="swiper-slider">
       <div class="swiper-container">
-        <div class="swiper-wrapper default-list">
-          <div class="swiper-slide"></div>
-        </div>
-
-        <div class="arrows">
-          <button class="swiper-button-prev" type="button">
+        <div class="swiper-arrows">
+          <button class="swiper-button-prev offers-slider__nav-button offers-slider__nav-button--prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
 
-          <button class="swiper-button-next" type="button">
+          <button class="swiper-button-next offers-slider__nav-button" type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
         </div>
+
+        <ul class="swiper-wrapper default-list">
+
+        </ul>
 
         <div class="container">
           <div class="swiper-pagination"></div>
@@ -632,11 +583,13 @@
 
     <!-- Контент слайда в секции offers -->
     <template id="offer">
-      <div class="container">
-        <h3 class="offer__title">Заголовок слайда</h3>
-        <p>Текстовый абзац с описанием слайда</p>
-        <a class="offer__link button" href="#">Посмотреть</a>
-      </div>
+      <li class="swiper-slide offers-slide">
+        <div class="container">
+          <h3 class="offers-slide__title">Заголовок слайда</h3>
+          <p class="offers-slide__description">Текстовый абзац с описанием слайда</p>
+          <a class="offers-slide__link button" href="#">Посмотреть</a>
+        </div>
+      </li>
     </template>
 
     <!-- Контент блока из слайда в секции main-products -->
@@ -671,10 +624,16 @@
       </div>
     </template>
 
+  <script src="js/util.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/backend.js"></script>
   <script src="js/main-nav.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/offers-slider.js"></script>
 
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/closest-ie11.js"></script>
+  <script src="js/slider-active-elements.js"></script>
   <script src="js/swiper-activate.js"></script>
-  <script src="js/slider.js"></script>
   </body>
 </html>
