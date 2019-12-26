@@ -2,10 +2,7 @@
 
 (function () {
   var getNavBtns = function () {
-    var btnsPrev = Array.from(document.querySelectorAll('.swiper-button-prev'));
-    var btnsNext = Array.from(document.querySelectorAll('.swiper-button-next'));
-
-    var allBtns = btnsPrev.concat(btnsNext);
+    var allBtns = Array.from(document.querySelectorAll('.swiper-button'));
 
     return allBtns;
   };
@@ -62,6 +59,7 @@
   };
 
   window.sliderActiveElements = {
+    activeCounter: 0,
     disableElements: disableElements,
     setListeners: setListeners,
     getSliderLists: getSliderLists,

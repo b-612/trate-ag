@@ -40,6 +40,7 @@ gulp.task('cssclean', function () {
 gulp.task('css', function () {
     return gulp.src([
         'source/sass/style.scss',
+        'source/sass/swiper.scss',
         'source/sass/normalize.scss'
     ])
         .pipe(plumber())

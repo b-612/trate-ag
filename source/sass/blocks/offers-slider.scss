@@ -7,7 +7,7 @@
     }
   }
 
-  .offers-slider__nav-button {
+  .swiper-button {
     color: transparent;
   }
 }
@@ -42,7 +42,7 @@
   }
 }
 
-.offers-slider__nav-button {
+.swiper-button {
   width: 21px;
   height: 36px;
   border: none;
@@ -54,16 +54,15 @@
 
   &:hover,
   &:focus {
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    background-image: url("../img/nav-slider-button-active.svg");
     outline: none;
   }
 
   &:active {
-    background-image: url("../img/nav-slider-button-active.svg");
-    filter: none;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   }
 
-  &--prev {
+  &-prev {
     transform: rotate(-180deg);
 
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
@@ -71,7 +70,7 @@
     }
   }
 
-  &--next {
+  &-next {
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
       position: static;
     }
