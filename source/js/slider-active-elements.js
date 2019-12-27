@@ -1,48 +1,39 @@
 'use strict';
 
 (function () {
-  var getNavBtns = function () {
-    var allBtns = Array.from(document.querySelectorAll('.swiper-button'));
+  var getNavBtns = function (sliderContainer) {
+    var allBtns = Array.from(sliderContainer.querySelectorAll('.swiper-button'));
 
     return allBtns;
   };
 
-  var getSliderLists = function () {
-    var lists = Array.from(document.querySelectorAll('.swiper-wrapper'));
-
-    return lists;
-  };
-
   var getCurrentList = function (evt) {
-    var lists = [];
     var container = evt.target.closest('.swiper-container');
     var list = container.querySelector('.swiper-wrapper');
 
-    lists.push(list);
-    return lists;
+    return list;
   };
 
-  var getLinks = function (lists) {
-    var links = [];
+  var getLinks = function (container) {
+    var links = Array.from(container.querySelectorAll('a'));
 
-    lists.forEach(function (it) {
-      var itLinks = Array.from(it.querySelectorAll('a'));
+    return links;
+  };
 
-      links.push(itLinks);
-    });
+  var getLinksFirstDownload = function (container) {
+    var links = Array.from(container.querySelectorAll('a'));
+    links.shift();
 
     return links;
   };
 
   var disableElements = function (links) {
-    links.forEach(function (currentLink) {
-      currentLink.forEach(function (it) {
-        if (it.closest('.swiper-slide-active')) {
-          it.tabIndex = 0;
-        } else {
-          it.tabIndex = -1;
-        }
-      });
+    links.forEach(function (it) {
+      if (it.closest('.swiper-slide-active')) {
+        it.tabIndex = 0;
+      } else {
+        it.tabIndex = -1;
+      }
     });
   };
 
@@ -58,12 +49,48 @@
     });
   };
 
+  var onSliderMaked = function (sliderContainer) {
+    return function () {
+      setListeners(getNavBtns(sliderContainer));
+
+      var mutationObserver = new MutationObserver(function () {
+        disableElements(getLinks(sliderContainer));
+        mutationObserver.disconnect();
+      });
+
+      var item = sliderContainer.querySelector('.swiper-slide');
+
+      mutationObserver.observe(item, {
+        attributes: true,
+        characterData: true,
+        childList: true,
+        subtree: true,
+        attributeOldValue: true,
+        characterDataOldValue: true
+      });
+
+      // mutationObserver.disconnect();
+    };
+  };
+
+  // var onActivateSlide = function (evt) {
+  //   var currentContainer = evt.currentTarget.classList.contains('swiper-container');
+  //
+  //   disableElements(getLinks(currentContainer));
+  //   evt.target.removeEventListener(onActivateSlide);
+  // };
+
+  var disableElementsFirst = function (sliderContainer) {
+    disableElements(getLinksFirstDownload(sliderContainer));
+  };
+
   window.sliderActiveElements = {
     activeCounter: 0,
     disableElements: disableElements,
     setListeners: setListeners,
-    getSliderLists: getSliderLists,
     getLinks: getLinks,
-    getNavBtns: getNavBtns
+    getNavBtns: getNavBtns,
+    onSliderMaked: onSliderMaked,
+    disableElementsFirst: disableElementsFirst
   };
 })();

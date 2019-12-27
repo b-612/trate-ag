@@ -2,6 +2,7 @@
 
 (function () {
   var sliderTemplate = document.querySelector('#swiper-slider');
+  var sliderMaked = new Event('sliderMaked');
 
   var makeSlidesContainer = function () {
     var sliderContainer = sliderTemplate.content.querySelector('.swiper-container').cloneNode(true);
@@ -26,6 +27,9 @@
 
     window.util.fragment.appendChild(container);
     section.appendChild(window.util.fragment);
+
+    document.addEventListener('sliderMaked', window.sliderActiveElements.onSliderMaked(container));
+    document.dispatchEvent(sliderMaked);
   };
 
   window.sliders = {

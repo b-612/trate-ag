@@ -363,65 +363,95 @@
 
       <section class="new-products">
         <div class="container">
-          <h2 class="new-products__title">Новинки</h2>
-          <a class="new-products__link">Хиты продаж</a>
+          <div class="new-products__heading-wrapper">
+            <h2 class="new-products__title section-title">Новинки</h2>
+            <a class="new-products__link" href="#">Хиты продаж</a>
+          </div>
 
-          <ul class="products__list">
-            <li class="products__product product product--big">
-              <h3 class="product__title">GFN0</h3>
-              <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
-              <span class="product__category">
-              Категория:
-              <a class="product__category-link" href="#">Bone build-up</a>
-            </span>
-              <a class="product__order" href="#">Заказать</a>
-              <img class="product__image product__image" src="#" width="251" height="492" alt="Изображение продукта">
-            </li>
+          <div class="swiper-container new-products__slider">
+            <div class="swiper-arrows">
+              <button class="swiper-button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
 
-            <li class="products__product product product--small">
-              <h3 class="product__title">SDLB</h3>
-              <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
-              <span class="product__category">
-              Категория:
-              <a class="product__category-link" href="#">Bone build-up</a>
-            </span>
-              <a class="product__order" href="#">Заказать</a>
-              <img class="product__image product__image" src="#" width="251" height="492" alt="Изображение продукта">
-            </li>
+              <button class="swiper-button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+              </button>
+            </div>
 
-            <li class="products__product product product--small">
-              <h3 class="product__title">SDLB</h3>
-              <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
-              <span class="product__category">
-              Категория:
-              <a class="product__category-link" href="#">Bone build-up</a>
-            </span>
-              <a class="product__order" href="#">Заказать</a>
-              <img class="product__image product__image" src="#" width="251" height="492" alt="Изображение продукта">
-            </li>
+            <ul class="swiper-wrapper new-products__slider default-list">
+              <li class="swiper-slide">
+                <ul class="new-products__list default-list">
+                  <li class="new-products__product product product--big">
+                    <div class="product__text-wrapper">
+                      <h3 class="product__title">GFN0</h3>
+                      <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
+                      <span class="product__category">
+                        Категория: <a class="product__category-link" href="#">Bone build-up</a>
+                      </span>
+                      <a class="product__order button" href="#">Заказать</a>
+                    </div>
+                    <picture>
+                      <source type="image/webp" srcset="img/new-product-1.webp">
+                      <img class="product__image" src="img/new-product-1.png" width="251" height="492" alt="Изображение продукта">
+                    </picture>
+                  </li>
 
-            <li class="products__product product product--small">
-              <h3 class="product__title">SDLB</h3>
-              <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
-              <span class="product__category">
-              Категория:
-              <a class="product__category-link" href="#">Bone build-up</a>
-            </span>
-              <a class="product__order" href="#">Заказать</a>
-              <img class="product__image product__image" src="#" width="251" height="492" alt="Изображение продукта">
-            </li>
+                  <li class="products__product product product--small">
+                    <h3 class="product__title">SDLB</h3>
+                    <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
+                    <span class="product__category">Категория: <a class="product__category-link" href="#">Bone build-up</a>
+                    </span>
+                    <a class="product__order" href="#">Заказать</a>
+                    <picture>
+                      <source type="image/webp" srcset="img/new-product-2.webp">
+                      <img class="product__image product__image" src="img/new-product-2.png" width="99" height="195" alt="Изображение продукта">
+                    </picture>
+                  </li>
 
-            <li class="products__product product product--small">
-              <h3 class="product__title">SDLB</h3>
-              <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
-              <span class="product__category">
-              Категория:
-              <a class="product__category-link" href="#">Bone build-up</a>
-            </span>
-              <a class="product__order" href="#">Заказать</a>
-              <img class="product__image product__image" src="#" width="251" height="492" alt="Изображение продукта">
-            </li>
-          </ul>
+                  <li class="products__product product product--small">
+                    <h3 class="product__title">SDLB</h3>
+                    <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
+                    <span class="product__category">Категория:<a class="product__category-link" href="#">Bone build-up</a>
+                    </span>
+                    <a class="product__order" href="#">Заказать</a>
+                    <picture>
+                      <source type="image/webp" srcset="img/new-product-3.webp">
+                      <img class="product__image product__image" src="img/new-product-3.png" width="428" height="285" alt="Изображение продукта">
+                    </picture>
+                  </li>
+
+                  <li class="products__product product product--small">
+                    <h3 class="product__title">SDLB</h3>
+                    <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
+                    <span class="product__category">Категория:<a class="product__category-link" href="#">Bone build-up</a>
+                    </span>
+                    <a class="product__order" href="#">Заказать</a>
+                    <picture>
+                      <source type="image/webp" srcset="img/new-product-4.webp">
+                      <img class="product__image product__image" src="img/new-product-4.png" width="435" height="286" alt="Изображение продукта">
+                    </picture>
+                  </li>
+
+                  <li class="products__product product product--small">
+                    <h3 class="product__title">SDLB</h3>
+                    <p class="product__description">Transfer for multiunite, open tray, material: Ti6Al4V.</p>
+                    <span class="product__category">Категория:<a class="product__category-link" href="#">Bone build-up</a>
+                    </span>
+                    <a class="product__order" href="#">Заказать</a>
+                    <picture>
+                      <source type="image/webp" srcset="img/new-product-5.webp">
+                      <img class="product__image product__image" src="img/new-product-5.png" width="65" height="161" alt="Изображение продукта">
+                    </picture>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="container">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -664,23 +694,25 @@
       </li>
     </template>
 
-    <!-- Контент блока из слайда в секции new-products -->
+    <!-- Слайд в секции new-products -->
     <template id="product">
-      <ul class="products__list">
-        <li class="products__product product">
-          <h3 class="product__title">Название продукта</h3>
-          <p class="product__description">Абзац с описанием продукта</p>
+      <li class="swiper-slide">
+        <ul class="products__list">
+          <li class="products__product product">
+            <h3 class="product__title">Название продукта</h3>
+            <p class="product__description">Абзац с описанием продукта</p>
 
-          <span class="product__category">
+            <span class="product__category">
             Категория:
             <a class="product__category-link" href="#">Название категории</a>
           </span>
 
-          <a class="product__order" href="#">Заказать</a>
+            <a class="product__order" href="#">Заказать</a>
 
-          <img class="product__image product__image--big" src="#" width="251" height="492" alt="Изображение продукта">
-        </li>
-      </ul>
+            <img class="product__image product__image--big" src="#" width="251" height="492" alt="Изображение продукта">
+          </li>
+        </ul>
+      </li>
     </template>
 
     <!-- Мероприятие в секции events и новость в секции news -->
@@ -704,11 +736,13 @@
   <script src="js/data.min.js"></script>
   <script src="js/backend.min.js"></script>
   <script src="js/main-nav.min.js"></script>
-  <script src="js/sliders.min.js"></script>
-  <script src="js/offers-slider.min.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/offers-slider.js"></script>
 
   <script src="js/slider-active-elements.js"></script>
   <script src="js/swiper-activate.js"></script>
-  <script src="js/swiper-script.min.js"></script>
+  <script src="js/swiper-script.js"></script>
+
+  <script src="js/order-btns.js"></script>
   </body>
 </html>
