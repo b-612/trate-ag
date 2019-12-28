@@ -1,0 +1,20 @@
+.about {
+  @media (min-width: $desktop-min-width) {
+    padding-top: 53px;
+    padding-bottom: 84px;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 65px;
+
+  color: $about-title-fc;
+  text-align: center;
+
+  @media (min-width: $desktop-min-width) {
+    width: 1120px;
+  }
+}
