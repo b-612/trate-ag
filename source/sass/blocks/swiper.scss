@@ -9,7 +9,7 @@
   transform: translateX(-50%);
   background-color: transparent;
 
-  @media (min-width: $tablet-min-width) and (max-width: $min-slider-point) {
+  @media (min-width: $tablet-min-width) and (max-width: $mшт-slider-desk-point) {
     position: absolute;
     bottom: 10px;
     z-index: 2;
@@ -18,7 +18,7 @@
     width: 95%;
   }
 
-  @media (min-width: $max-slider-point) {
+  @media (min-width: $max-slider-desk-point) {
     left: 50%;
 
     width: 1500px;
@@ -52,13 +52,13 @@
   &-prev {
     transform: rotate(-180deg);
 
-    @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
+    @media (min-width: $desktop-min-width) and (max-width: $mшт-slider-desk-point) {
       margin-left: 25px;
     }
   }
 
   &-next {
-    @media (min-width: $desktop-min-width) and (max-width: $min-slider-point) {
+    @media (min-width: $desktop-min-width) and (max-width: $mшт-slider-desk-point) {
       position: static;
       margin-left: auto;
       margin-top: -9px;
@@ -81,7 +81,7 @@
 
 .offers-slider {
   .swiper-arrows {
-    @media (min-width: $max-slider-point) {
+    @media (min-width: $max-slider-desk-point) {
       top: 289px;
       z-index: 2;
     }
@@ -94,7 +94,7 @@
       margin-top: -49px;
     }
 
-    @media (min-width: $max-slider-point) {
+    @media (min-width: $max-slider-desk-point) {
       left: 20px;
 
       margin-top: -81px;
@@ -109,7 +109,7 @@
       bottom: -70px;
     }
 
-    @media (min-width: $max-slider-point) {
+    @media (min-width: $max-slider-desk-point) {
       top: 268px;
     }
   }
