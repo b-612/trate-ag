@@ -51,8 +51,27 @@
     });
   };
 
+  var activateEventsSlider = function () {
+    var newProductsSlider = new Swiper ('.events__slider', {
+      // Optional parameters
+      cssMode: true,
+      direction: 'horizontal',
+      loop: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+
+      mousewheel: true,
+      keyboard: true,
+    });
+  };
+
   window.swiperActivate = {
     activateOffersSlider: activateOffersSlider,
-    activateNewProductsSlider: activateNewProductsSlider
+    activateNewProductsSlider: activateNewProductsSlider,
+    activateEventsSlider: activateEventsSlider
   };
 })();

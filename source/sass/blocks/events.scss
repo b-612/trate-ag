@@ -1,0 +1,31 @@
+.events {
+  background-color: $events-bg;
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 50px;
+    padding-bottom: 48px;
+  }
+}
+
+.events__title {
+  margin-top: 0;
+
+  color: $events-title-fc;
+  text-align: center;
+
+  @media (min-width: $desktop-min-width) {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 44px;
+  }
+}
+
+.events__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-min-width) {
+    max-height: 400px;
+  }
+}

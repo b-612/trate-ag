@@ -27,7 +27,7 @@
   font-weight: bold;
 
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   &:hover,
   &:focus,
@@ -140,7 +140,7 @@
   color: $main-nav-fc;
 
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   &:hover,
   &:focus {
@@ -183,7 +183,7 @@
 
 .nesting-list-animation {
   animation-name: nestingListOpen;
-  animation-duration: 0.3s;
+  animation-duration: $short-transition;
   animation-timing-function: linear;
 }
 

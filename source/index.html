@@ -11,10 +11,6 @@
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="css/swiper.min.css" as="style">
 
-    <link rel="preload" href="img/nav-slider-button-active.svg" as="image" crossorigin>
-    <link rel="preload" href="img/sprite.svg" as="image">
-    <link rel="preload" href="img/basket.svg" as="image">
-
     <link rel="preload" href="js/closest-ie11.min.js" as="script">
     <link rel="preload" href="js/main-nav.min.js" as="script">
     <link rel="preload" href="js/swiper-script.min.js" as="script">
@@ -781,39 +777,45 @@
       </section>
 
       <section class="events">
-        <h2 class="events__title">Ближайшие мероприятия</h2>
+        <div class="container">
+          <h2 class="events__title section-title">Ближайшие мероприятия</h2>
 
-        <div class="swiper-container events__slider">
-          <div class="swiper-arrows">
-            <button class="swiper-button swiper-button-prev" type="button">
-              <span class="visually-hidden">Предыдущий слайд</span>
-            </button>
+          <div class="swiper-container events__slider">
+            <div class="swiper-arrows">
+              <button class="swiper-button swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
 
-            <button class="swiper-button swiper-button-next" type="button">
-              <span class="visually-hidden">Следующий слайд</span>
-            </button>
-          </div>
+              <button class="swiper-button swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+              </button>
+            </div>
 
-          <ul class="swiper-wrapper default-list">
-            <li class="swiper-slide">
-              <ul class="events__list">
-                <li class="events__event event">
-                  <div class="event__info">
-                    <time class="event__date" datetime="2019-12-12">12 декабря</time>
-
-                    <a class="event__link" href="">
-                      <h3 class="event__title">Конометрическая фиксация протезов</h3>
+            <ul class="swiper-wrapper default-list">
+              <li class="swiper-slide">
+                <ul class="events__list default-list">
+                  <li class="events__event event" style="background-image: url('img/conf-td.jpg')">
+                    <a class="event__link" href="#">
+                      <div class="event__info">
+                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
+                        <h3 class="event__title">Конометрическая фиксация протезов</h3>
+                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
+                      </div>
                     </a>
+                  </li>
 
-                    <p class="event__description">Присоединяйтесь к международной научной конференции</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-          <div class="container">
-            <div class="swiper-pagination"></div>
+                  <li class="events__event event" style="background-image: url('img/traning-td.jpg')">
+                    <a class="event__link" href="#">
+                      <div class="event__info">
+                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
+                        <h3 class="event__title">Тренинг Конометрическая фиксация протезов</h3>
+                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

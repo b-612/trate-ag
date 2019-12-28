@@ -11,6 +11,9 @@ $daxline-pro: "DaxlinePro", "Helevatica", "Arial", sans-serif;
 $roboto-bold: "Roboto Bold", "Helevatica", "Arial", sans-serif;
 $roboto-regular: "Roboto", "Helevatica", "Arial", sans-serif;
 
+/* Переходы */
+$short-transition: 0.3s;
+
 /* Глобальная область */
 $body-fs: 14px;
 $body-lh: 1.5;
@@ -89,7 +92,7 @@ $slide-color: #323232;
 $slide-container-width-d: 1280px;
 $pagination-passive-color: #ffffff;
 $pagination-active-color: #e33439;
-$mшт-slider-desk-point: 1539px;
+$min-slider-desk-point: 1539px;
 $max-slider-desk-point: 1540px;
 
 /* Новинки */
@@ -114,3 +117,19 @@ $product-order-hover-color: #ffffff;
 $product-order-hover-bg: #e33439;
 $product-cat-link-hover-fc: #0d0d14;
 $product-text-wrapper-bg: rgba(255, 255, 255, 0.9);
+
+/* Ближайшие мероприятия */
+$events-bg: #9293a6;
+$events-title-fc: #ffffff;
+
+/* Мероприятие отдельно */
+$event-bg: #e9e9ea;
+$event-info-bg: rgba(255, 255, 255, 0.9);
+$event-info-hover-bg: #e33439;
+$event-info-active-bg: #c22a2e;
+$event-info-fs: 14px;
+$event-info-lh: 1.2;
+$event-link-fc: #323232;
+$event-link-hover-fc: #ffffff;
+$event-title-fs: 18px;
+$event-desc-lh: 1.4;

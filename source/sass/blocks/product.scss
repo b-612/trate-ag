@@ -91,7 +91,7 @@
   color: $product-text-fc;
 
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   background-color: $product-text-wrapper-bg;
 
@@ -118,7 +118,7 @@
   word-break: break-word;
 
   transition-property: color, border-bottom-color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
 
   @media (min-width: $desktop-min-width) {
@@ -137,7 +137,7 @@
   font-size: $product-text-fs;
 
   transition-property: color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   @media (min-width: $desktop-min-width) {
     margin-top: 16px;
@@ -155,7 +155,7 @@
   font-size: $product-text-fs;
 
   transition-property: color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   @media (min-width: $desktop-min-width) {
     margin-bottom: 20px;
@@ -171,7 +171,7 @@
   text-decoration: underline;
 
   transition-property: color;
-  transition-duration: 0.3s;
+  transition-duration: $short-transition;
 
   &:hover,
   &:focus {
