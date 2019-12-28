@@ -103,7 +103,8 @@ $new-prod-section-background: #f0f0f0;
 /* Карточка продукта в новых продуктах */
 $product-bg: #ffffff;
 $product-title-fc: #0d0d14;
-$product-title-fs-d: 38px;
+$product-title-small-fs-d: 22px;
+$product-title-big-fs-d: 38px;
 $product-title-lh: 1.4;
 $product-text-fs: 14px;
 $product-text-lh: 1.4;
@@ -112,3 +113,4 @@ $product-category-fc: #e33439;
 $product-order-hover-color: #ffffff;
 $product-order-hover-bg: #e33439;
 $product-cat-link-hover-fc: #0d0d14;
+$product-text-wrapper-bg: rgba(255, 255, 255, 0.9);

@@ -3,11 +3,13 @@
 
   @media (min-width: $desktop-min-width) {
     padding-top: 59px;
+    padding-bottom: 137px;
   }
 }
 
 .new-products__slider {
   z-index: 3;
+  overflow: visible;
 }
 
 .new-products__heading-wrapper {
@@ -21,6 +23,12 @@
   @media (min-width: $desktop-min-width) {
     max-width: 456px;
     margin-bottom: 28px;
+  }
+}
+
+.new-products__product {
+  @media (min-width: $desktop-min-width) {
+    margin-right: 32px;
   }
 }
 
@@ -40,6 +48,7 @@
   &:hover,
   &:focus {
     color: $new-prod-link-hover-fc;
+    outline: none;
   }
 
   &:active {
@@ -59,9 +68,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
 
   @media (min-width: $desktop-min-width) {
-    height: 580px;
+    min-height: 600px;
+    max-height: 850px;
   }
 }

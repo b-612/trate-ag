@@ -5,6 +5,8 @@
   background-position: center top;
 
   .container {
+    z-index: 3;
+
     width: $slide-container-width-d;
     padding-top: 125px;
     padding-bottom: 125px;

@@ -2,19 +2,82 @@
   position: relative;
 
   box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
 
   background-color: $product-bg;
 
   @media (min-width: $desktop-min-width) {
     width: 405px;
+  }
 
-    &--big {
-      min-height: 580px;
+  &--big {
+    min-height: 580px;
 
-      .product__image {
+    .product__text-wrapper {
+      @media (min-width: $desktop-min-width) {
+        min-height: 580px;
+        padding-top: 64px;
+      }
+    }
+
+    .product__title {
+      @media (min-width: $desktop-min-width) {
+        font-size: $product-title-big-fs-d;
+      }
+    }
+
+    .product__order {
+      @media (min-width: $desktop-min-width) {
+        margin-top: 39px;
+      }
+    }
+
+    .product__image {
+      &--detail {
         top: 50%;
-        left: -23px;
-        transform: translateY(-52%);
+        left: 25%;
+
+        transform: translate(-50%, -52%);
+      }
+    }
+  }
+
+  &--small {
+    min-height: 280px;
+
+    @media (min-width: $desktop-min-width) {
+      margin-bottom: 20px;
+    }
+
+    .product__text-wrapper {
+      @media (min-width: $desktop-min-width) {
+        width: 216px;
+        min-height: 280px;
+        margin-left: 192px;
+        padding-top: 27px;
+        padding-left: 26px;
+      }
+    }
+
+    .product__title {
+      @media (min-width: $desktop-min-width) {
+        font-size: $product-title-small-fs-d;
+      }
+    }
+
+    .product__order {
+      @media (min-width: $desktop-min-width) {
+        margin-top: 21px;
+      }
+    }
+
+    .product__image {
+      &--detail {
+        top: 46%;
+        left: 25%;
+
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -30,11 +93,11 @@
   transition-property: background-color;
   transition-duration: 0.3s;
 
+  background-color: $product-text-wrapper-bg;
+
   @media (min-width: $desktop-min-width) {
     width: 206px;
-    height: 100%;
     margin-left: 199px;
-    padding-top: 64px;
     padding-left: 22px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -62,8 +125,6 @@
     margin-top: 0;
     margin-bottom: 10px;
     padding-bottom: 13px;
-
-    font-size: $product-title-fs-d;
   }
 
   &--hover {
@@ -136,7 +197,6 @@
 
   @media (min-width: $desktop-min-width) {
     width: 145px;
-    margin-top: 39px;
     padding-top: 11px;
     padding-left: 40px;
     padding-right: 10px;
@@ -175,4 +235,5 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 }

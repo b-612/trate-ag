@@ -8635,6 +8635,6 @@
 //# sourceMappingURL=swiper.js.map
 
   document.addEventListener('sliderMaked', function () {
-    window.swiperActivate.activateSliders();
+    window.swiperActivate.activateOffersSlider();
   });
 })();
