@@ -141,6 +141,20 @@
   }
 }
 
+.news__slider {
+  overflow: visible;
+
+  .swiper-arrows {
+    @media (min-width: $desktop-min-width) and (max-width: $min-slider-desk-point) {
+      top: -87px;
+    }
+
+    @media (min-width: $max-slider-desk-point) {
+      top: 159px;
+    }
+  }
+}
+
 .swiper-pagination-bullet {
   display: inline-block;
   width: 18px;

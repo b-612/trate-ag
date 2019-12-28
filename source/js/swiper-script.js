@@ -8641,5 +8641,6 @@
   window.onload = function () {
     window.swiperActivate.activateNewProductsSlider();
     window.swiperActivate.activateEventsSlider();
+    window.swiperActivate.activateNewsSlider();
   };
 })();
