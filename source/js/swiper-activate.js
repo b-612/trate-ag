@@ -52,10 +52,7 @@
   };
 
   window.swiperActivate = {
-    activateOffersSlider: activateOffersSlider
-  };
-
-  window.onload = function () {
-    activateNewProductsSlider();
+    activateOffersSlider: activateOffersSlider,
+    activateNewProductsSlider: activateNewProductsSlider
   };
 })();

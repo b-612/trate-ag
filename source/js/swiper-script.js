@@ -8637,4 +8637,8 @@
   document.addEventListener('sliderMaked', function () {
     window.swiperActivate.activateOffersSlider();
   });
+
+  window.onload = function () {
+    window.swiperActivate.activateNewProductsSlider();
+  };
 })();
