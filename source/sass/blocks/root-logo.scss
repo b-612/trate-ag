@@ -1,0 +1,18 @@
+.header-info__main-title {
+  .root-logo {
+    display: block;
+
+    @media (max-width: $mobile-max-width) {
+      width: 64px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $tablet-min-width) {
+      position: absolute;
+      bottom: 0;
+
+      display: inline-block;
+    }
+  }
+}

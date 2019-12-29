@@ -14,7 +14,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-within {
     background-color: $news-item-hover-bg;
   }
 }
@@ -32,6 +32,8 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     .news-item__title {
       color: $news-title-hover-fc;
       text-decoration: underline;
@@ -72,7 +74,7 @@
   font-size: $news-title-fs;
   line-height: $news-title-lh;
 
-  transition-property: color, text-decoration;
+  transition-property: color;
   transition-duration: $short-transition;
 }
 

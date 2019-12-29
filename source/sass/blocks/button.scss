@@ -1,4 +1,5 @@
 .button {
+  display: block;
   padding-top: 14px;
   padding-left: 26px;
   padding-right: 26px;
@@ -14,7 +15,7 @@
   background-color: transparent;
 
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: $short-transition;
 
   &:hover,
   &:focus {

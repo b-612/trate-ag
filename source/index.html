@@ -13,6 +13,8 @@
 
     <link rel="preload" href="js/closest-ie11.min.js" as="script">
     <link rel="preload" href="js/picturefill.min.js" as="script">
+    <link rel="preload" href="js/responsive.min.js" as="script">
+    <link rel="preload" href="js/nav-toggle.min.js" as="script">
     <link rel="preload" href="js/main-nav.min.js" as="script">
     <link rel="preload" href="js/swiper-script.min.js" as="script">
     <link rel="preload" href="js/swiper-activate.min.js" as="script">
@@ -94,7 +96,7 @@
 
           <h1 class="header-info__main-title">
             Производитель стоматологической системы имплантов
-            <span class="header-info__title-image"></span></h1>
+            <img class="root-logo" src="img/root.png" width="64" height="32" alt="Логотип Root open implant system"></h1>
 
           <a class="header-info__button button" href="#">Обратный звонок</a>
 
@@ -114,14 +116,20 @@
 
       <nav class="page-header__main-nav main-nav">
         <div class="container">
+          <button class="main-nav__toggle nav-toggle" type="button">
+            <span class="visually-hidden">Переключатель открывающий/закрывающий меню</span>
+            <span class="nav-toggle__line nav-toggle__line--first"></span>
+            <span class="nav-toggle__line nav-toggle__line--second"></span>
+            <span class="nav-toggle__line nav-toggle__line--third"></span>
+          </button>
 
           <ul class="main-nav__list default-list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="">Главная</a>
+              <a class="main-nav__link" href="#">Главная</a>
             </li>
 
             <li class="main-nav__item main-nav__item--list">
-              <a class="main-nav__link main-nav__link--list" href="#">О компании</a>
+              <a class="main-nav__link main-nav__link--list">О компании</a>
 
               <ul class="main-nav__nesting-list default-list visually-hidden">
                 <li class="main-nav__nesting-item">
@@ -139,7 +147,7 @@
             </li>
 
             <li class="main-nav__item main-nav__item--list">
-              <a class="main-nav__link main-nav__link--list" href="#">Каталог/линейки</a>
+              <a class="main-nav__link main-nav__link--list">Каталог/линейки</a>
 
               <ul class="main-nav__nesting-list default-list visually-hidden">
                 <li class="main-nav__nesting-item">
@@ -177,7 +185,7 @@
             </li>
 
             <li class="main-nav__item main-nav__item--list">
-              <a class="main-nav__link main-nav__link--list" href="#">Специалисту</a>
+              <a class="main-nav__link main-nav__link--list">Специалисту</a>
 
               <ul class="main-nav__nesting-list default-list visually-hidden">
                 <li class="main-nav__nesting-item">
@@ -203,7 +211,7 @@
             </li>
 
             <li class="main-nav__item main-nav__item--list">
-              <a class="main-nav__link main-nav__link--list" href="#">Пациенту</a>
+              <a class="main-nav__link main-nav__link--list">Пациенту</a>
 
               <ul class="main-nav__nesting-list default-list visually-hidden">
                 <li class="main-nav__nesting-item">
@@ -419,7 +427,7 @@
                     </div>
                     <picture>
                       <source type="image/webp" srcset="img/new-product-3.webp">
-                      <img class="product__image" src="img/new-product-3.png" width="428" height="285" alt="Изображение продукта">
+                      <img class="product__image" src="img/new-product-3.jpg" width="428" height="285" alt="Изображение продукта">
                     </picture>
                   </li>
 
@@ -433,7 +441,7 @@
                     </div>
                     <picture>
                       <source type="image/webp" srcset="img/new-product-4.webp">
-                      <img class="product__image" src="img/new-product-4.png" width="435" height="286" alt="Изображение продукта">
+                      <img class="product__image" src="img/new-product-4.jpg" width="435" height="286" alt="Изображение продукта">
                     </picture>
                   </li>
 
@@ -975,159 +983,168 @@
     </main>
 
     <footer class="page-footer">
+      <div class="container">
+        <div class="page-footer__wrapper page-footer__wrapper--copyright">
+          <a class="page-footer__logo logo">
+            <picture>
+              <source type="image/webp" srcset="img/logo.webp">
+              <img src="img/logo.png" width="97" height="28" alt="Логотип компании Trate">
+            </picture>
+          </a>
 
-      <div class="page-footer__copyright-wrapper">
-        <a class="page-footer__logo logo">
-          <img src="#" width="97" height="28" alt="Логотип компании Trate">
-        </a>
+          <p class="page-footer__copyright">2019 © Trate Производитель стоматологической системы имплантов ROOTT</p>
+          <img class="root-logo" src="img/root.png" width="77" height="26" alt="Логотип Root open implant system">
+        </div>
 
-        <p class="page-footer__copyright">2019 © Trate
-          Производитель стоматологической системы имплантов ROOTT</p>
+        <nav class="page-footer__nav footer-nav">
+          <ul class="footer-nav__list default-list">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--heading" href="#">О компании</a>
+
+              <ul class="footer-nav__nesting-list default-list">
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">О нас</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Политика качества</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Сертификаты</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--heading" href="#">Каталог/Линейки</a>
+
+              <ul class="footer-nav__nesting-list default-list">
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">ROOTFORM</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">COMPRESSIVE MS</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">COMPRESSIVE M</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">COMPRESSIVE MP</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">COMPRESSIVE</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">COMPRESSIVE S</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">BASAL</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">BASAL SS</a>
+                </li>
+              </ul>
+
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--heading" href="#">Специалисту</a>
+
+              <ul class="footer-nav__nesting-list default-list">
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">О продукции</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Выбор линейки</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Обучение</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Научные публикации</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Календарь событий</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--heading" href="#">Пациенту</a>
+
+              <ul class="footer-nav__nesting-list default-list">
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Гарантии качества</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Вопрос-ответ</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Полезные статьи</a>
+                </li>
+                <li class="footer-nav__nesting-item">
+                  <a class="footer-nav__link" href="#">Куда пойти лечиться</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="page-footer__wrapper page-footer__wrapper--info">
+          <ul class="page-footer__phone-numbers phone-numbers default-list">
+            <li class="phone-numbers__item">
+              <a class="phone-numbers__link" href="tel:+78002002020">+7 (800) 200-20-20</a>
+            </li>
+
+            <li class="phone-numbers__item">
+              <a class="phone-numbers__link" href="tel:+74994994949">+7 (499) 499-49-49</a>
+            </li>
+          </ul>
+
+          <a class="page-footer__button button" href="#">Обратный звонок</a>
+
+          <ul class="page-footer__socials socials default-list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--fb" href="#">
+                <svg class="socials__icon socials__icon--fb" width="27" height="27" role="img" aria-labelledby="footer-heading-fb" focusable="false">
+                  <title id="footer-heading-fb"></title>
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#">
+                <svg class="socials__icon socials__icon--vk" width="27" height="27" role="img" aria-labelledby="footer-heading-vk" focusable="false">
+                  <title id="footer-heading-vk"></title>
+                  <use xlink:href="img/sprite.svg#vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link socials__link--youtube" href="#">
+                <svg class="socials__icon socials__icon--youtube" width="27" height="27" role="img" aria-labelledby="footer-heading-youtube" focusable="false">
+                  <title id="footer-heading-youtube"></title>
+                  <use xlink:href="img/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link socials__link--insta" href="#">
+                <svg class="socials__icon socials__icon--insta" width="27" height="27" role="img" aria-labelledby="footer-heading-insta" focusable="false">
+                  <title id="footer-heading-insta"></title>
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <nav class="page-footer__nav footer-nav">
-        <ul class="footer-nav__list default-list">
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">О компании</a>
-
-            <ul class="footer-nav__nesting-list default-list">
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">О нас</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Политика качества</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Сертификаты</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Контакты</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Каталог/Линейки</a>
-
-            <ul class="footer-nav__nesting-list default-list">
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">COMPRESSIVE MS</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">COMPRESSIVE M</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">COMPRESSIVE MP</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">COMPRESSIVE</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">COMPRESSIVE S</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">BASAL</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">BASAL SS</a>
-              </li>
-            </ul>
-
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Специалисту</a>
-
-            <ul class="footer-nav__nesting-list default-list">
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">О продукции</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Выбор линейки</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Обучение</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Научные публикации</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Календарь событий</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Пациенту</a>
-
-            <ul class="footer-nav__nesting-list default-list">
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Гарантии качества</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Вопрос-ответ</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Полезные статьи</a>
-              </li>
-              <li class="footer-nav__nesting-item">
-                <a class="footer-nav__link">Куда пойти лечиться</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="page-footer__info">
-        <ul class="page-footer__phone-numbers phone-numbers default-list">
-          <li class="phone-numbers__item">
-            <a class="phone-numbers__link" href="tel:+78002002020">+7 (800) 200-20-20</a>
-          </li>
-
-          <li class="phone-numbers__item">
-            <a class="phone-numbers__link" href="tel:+74994994949">+7 (499) 499-49-49</a>
-          </li>
-        </ul>
-
-        <a class="page-footer__button button" href="#">Обратный звонок</a>
-      </div>
-
-      <ul class="page-footer__socials socials default-list">
-        <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="#">
-            <svg class="socials__icon socials__icon--fb" width="27" height="27" role="img" aria-labelledby="footer-heading-fb" focusable="false">
-              <title id="footer-heading-fb"></title>
-              <use xlink:href=""></use>
-            </svg>
-          </a>
-        </li>
-
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#">
-            <svg class="socials__icon socials__icon--vk" width="27" height="27" role="img" aria-labelledby="footer-heading-vk" focusable="false">
-              <title id="footer-heading-vk"></title>
-              <use xlink:href=""></use>
-            </svg>
-          </a>
-        </li>
-
-        <li class="socials__item">
-          <a class="socials__link socials__link--youtube" href="#">
-            <svg class="socials__icon socials__icon--youtube" width="27" height="27" role="img" aria-labelledby="footer-heading-youtube" focusable="false">
-              <title id="footer-heading-youtube"></title>
-              <use xlink:href=""></use>
-            </svg>
-          </a>
-        </li>
-
-        <li class="socials__item">
-          <a class="socials__link socials__link--insta" href="#">
-            <svg class="socials__icon socials__icon--insta" width="27" height="27" role="img" aria-labelledby="footer-heading-insta" focusable="false">
-              <title id="footer-heading-insta"></title>
-              <use xlink:href=""></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
     </footer>
+
+    <div class="overlay overlay--hidden"></div>
 
     <!-- Слайдер Swiper-->
     <template id="swiper-slider">
@@ -1169,7 +1186,9 @@
   <script src="js/util.min.js"></script>
   <script src="js/data.min.js"></script>
   <script src="js/backend.min.js"></script>
-  <script src="js/main-nav.min.js"></script>
+  <script src="js/nav-toggle.min.js"></script>
+  <script src="js/main-nav.js"></script>
+  <script src="js/responsive.min.js"></script>
   <script src="js/sliders.min.js"></script>
   <script src="js/offers-slider.min.js"></script>
 
