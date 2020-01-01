@@ -78,6 +78,13 @@
 
 .offers-slider {
   .swiper-arrows {
+    @media (max-width: $mobile-max-width) {
+      width: 95%;
+      z-index: 2;
+      left: 50%;
+      bottom: -67px;
+    }
+
     @media (min-width: $max-slider-desk-point) {
       top: 289px;
       z-index: 2;
@@ -85,7 +92,13 @@
   }
 
   .swiper-pagination-bullets {
-    text-align: left;
+    @media (max-width: $mobile-max-width) {
+      width: 185px;
+      left: 50%;
+      bottom: -54px;
+      text-align: center;
+      transform: translateX(-50%);
+    }
 
     @media (min-width: $tablet-min-width) {
       margin-top: -49px;
@@ -96,6 +109,16 @@
 
       margin-top: -81px;
       transform: none;
+
+      text-align: left;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    @media (max-width: $mobile-max-width) {
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
     }
   }
 }

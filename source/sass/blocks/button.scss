@@ -11,11 +11,18 @@
   line-height: $button-lh;
   color: $button-fc;
   text-align: center;
+  word-break: break-word;
 
   background-color: transparent;
 
   transition-property: all;
   transition-duration: $short-transition;
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 280px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
 
   &:hover,
   &:focus {

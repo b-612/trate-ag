@@ -49,6 +49,9 @@
       mousewheel: true,
       keyboard: true,
     });
+    window.addEventListener('load', function () {
+      window.orderBtns.setOrderHoverListeners();
+    });
   };
 
   var activateEventsSlider = function () {

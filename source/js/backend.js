@@ -9,6 +9,8 @@
     STATUS_OK: 200
   };
 
+  var xhrResults = {};
+
   var getXhr = function () {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
@@ -29,10 +31,13 @@
     return xhr.response;
   };
 
-  var setLoadCallback = function (xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method) {
+  var setLoadCallback = function (xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName) {
     xhr.addEventListener('load', function () {
+      var xhrResult = null;
+
       if (xhr.status === backendData.STATUS_OK) {
         if (method === backendData.METHOD_FOR_GET) {
+          xhrResult = xhr.response;
           var result = getFunc(xhr.response);
           onLoad(result, section, containerClassList, listClassList);
         } else {
@@ -41,18 +46,21 @@
       } else {
         onError(section);
       }
+
+      window.backend.xhrResults['' + resultName] = Array.from(xhrResult);
     });
   };
 
-  var getSendData = function (dataUrl, method, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, sendData) {
+  var getSendData = function (dataUrl, method, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, sendData, resultName) {
     var xhr = getXhr();
 
     getXhrParams(xhr, dataUrl, method, window.backend.backendData.REQUEST_TIMEOUT, sendData);
-    setLoadCallback(xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method);
+    setLoadCallback(xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName);
   };
 
   window.backend = {
     getSendData: getSendData,
-    backendData: backendData
+    backendData: backendData,
+    xhrResults: xhrResults
   };
 })();

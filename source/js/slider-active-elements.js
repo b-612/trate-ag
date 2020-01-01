@@ -53,32 +53,28 @@
     return function () {
       setListeners(getNavBtns(sliderContainer));
 
-      var mutationObserver = new MutationObserver(function () {
-        disableElements(getLinks(sliderContainer));
-        mutationObserver.disconnect();
-      });
-
       var item = sliderContainer.querySelector('.swiper-slide');
 
-      mutationObserver.observe(item, {
-        attributes: true,
-        characterData: true,
-        childList: true,
-        subtree: true,
-        attributeOldValue: true,
-        characterDataOldValue: true
-      });
+      if (item) {
+        var mutationObserver = new MutationObserver(function () {
+          disableElements(getLinks(sliderContainer));
+          mutationObserver.disconnect();
+        });
 
-      // mutationObserver.disconnect();
+
+        mutationObserver.observe(item, {
+          attributes: true,
+          characterData: true,
+          childList: true,
+          subtree: true,
+          attributeOldValue: true,
+          characterDataOldValue: true
+        });
+
+        // mutationObserver.disconnect();
+      }
     };
   };
-
-  // var onActivateSlide = function (evt) {
-  //   var currentContainer = evt.currentTarget.classList.contains('swiper-container');
-  //
-  //   disableElements(getLinks(currentContainer));
-  //   evt.target.removeEventListener(onActivateSlide);
-  // };
 
   var disableElementsFirst = function (sliderContainer) {
     disableElements(getLinksFirstDownload(sliderContainer));

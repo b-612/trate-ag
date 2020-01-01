@@ -39,6 +39,10 @@
         left: 25%;
 
         transform: translate(-50%, -52%);
+
+        @media (min-width: $tablet-min-width) {
+          max-width: 180px;
+        }
       }
     }
   }

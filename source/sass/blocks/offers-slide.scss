@@ -4,12 +4,26 @@
   background-repeat: no-repeat;
   background-position: center top;
 
+  @media (max-width: $mobile-max-width) {
+    background-size: 767px 248px;
+  }
+
   .container {
     z-index: 3;
 
     width: $slide-container-width-d;
-    padding-top: 125px;
-    padding-bottom: 125px;
+
+    @media (max-width: $mobile-max-width) {
+      min-height: 248px;
+      box-sizing: border-box;
+      padding-top: 25px;
+      padding-bottom: 4px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      padding-top: 125px;
+      padding-bottom: 125px;
+    }
   }
 
   @media (min-width: $desktop-min-width) {
@@ -26,11 +40,17 @@
   line-height: $slide-lh;
   color: $slide-color;
 
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+    margin-bottom: 20px;
+    font-size: $slide-title-fs-m;
+  }
+
   @media (min-width: $tablet-min-width) {
     max-width: 515px;
     margin-bottom: 32px;
 
-    font-size: $slide-title-fs;
+    font-size: $slide-title-fs-td;
 
     &::after {
       content: "";
@@ -46,17 +66,38 @@
 }
 
 .offers-slide__description {
+  max-width: 280px;
+
   font-weight: normal;
   font-size: $slide-desc-fs;
   line-height: $slide-lh;
 
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $tablet-min-width) {
-    max-width: 280px;
     margin-bottom: 30px;
   }
 }
 
 .offers-slide__link {
+  @media (max-width: $mobile-max-width) {
+    max-width: 170px;
+    color: $offers-link-fc-m;
+    background-color: $offers-link-bg-m;
+
+    &:hover,
+    &:focus {
+      background-color: $offers-link-hover-bg-m;
+      border-color: $offers-link-hover-bg-m;
+    }
+
+    &:active {
+      color: $slide-color;
+    }
+  }
+
   @media (min-width: $tablet-min-width) {
     display: block;
     max-width: 101px;

@@ -1,11 +1,6 @@
 'use strict';
 
 (function () {
-  var MOBILE_MAX_WIDTH = 767;
-  var DESKTOP_MIN_WIDTH = 1340;
-  var RETINA_DPI = '144dpi';
-  var RETINA_DPPX = '1.5dppx';
-
   var offerTemlate = document.querySelector('#offer');
   var offerSection = document.querySelector('.offers');
   var containerClass = 'offers-slider';
@@ -45,7 +40,7 @@
 
       var style = '<style scope>'
         +
-        '@media (max-width: ' + MOBILE_MAX_WIDTH + 'px) {\n'
+        '@media (max-width: ' + window.util.MOBILE_MAX_WIDTH + 'px) {\n'
         +
         '  .offers-slide--' + (i + 1) + ' {\n'
         +
@@ -53,7 +48,7 @@
         +
         '  }\n\n'
         +
-      '    @media (min-resolution: ' + RETINA_DPI + '), (min-resolution: ' + RETINA_DPPX + ') {\n'
+      '    @media (min-resolution: ' + window.util.RETINA_DPPX + '), (min-resolution: ' + window.util.RETINA_DPPX + ') {\n'
         +
         '    .offers-slide--' + (i + 1) + ' {\n'
         +
@@ -64,7 +59,7 @@
         +
         '}\n\n'
         +
-        '@media (min-width: ' + DESKTOP_MIN_WIDTH + 'px) {\n'
+        '@media (min-width: ' + window.util.DESKTOP_MIN_WIDTH + 'px) {\n'
         +
         '  .offers-slide--' + (i + 1) + ' {\n'
         +
@@ -81,5 +76,5 @@
     return allOfferItems;
   };
 
-  window.backend.getSendData(window.data.OFFERS_DATA, window.backend.backendData.METHOD_FOR_GET, window.sliders.makeSlider, offerSection, containerClass, listClass, makeOffers, false, window.sliders.removeSlidesSection, false, false);
+  window.backend.getSendData(window.data.OFFERS_DATA, window.backend.backendData.METHOD_FOR_GET, window.sliders.makeSlider, offerSection, containerClass, listClass, makeOffers, false, window.sliders.removeSlidesSection, false, 'offers');
 })();

@@ -1,6 +1,9 @@
 .implant-examples {
   @media (max-width: $mobile-max-width) {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
   }
 
   @media (min-width: $tablet-min-width) {
@@ -17,6 +20,17 @@
 
 .implant-examples__item {
   margin-bottom: 20px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 130px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 1px solid $implant-border-fc;
+  }
 
   &--rootform {
     .implant-examples__link {
@@ -114,7 +128,6 @@
 }
 
 .implant-examples__title {
-  margin-top: 13px;
   max-width: 170px;
 
   font-family: $daxline-pro;
@@ -123,18 +136,39 @@
   font-weight: bold;
   text-transform: uppercase;
   vertical-align: top;
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 14px;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    margin-top: 13px;
+  }
 }
 
 .implant-examples__flag {
-  display: inline-block;
+  display: block;
   width: 28px;
-  margin-top: -5px;
+
   padding-top: 4px;
   border-radius: 4px;
 
   color: $examples-flag-fc;
   text-align: center;
   vertical-align: inherit;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    display: inline-block;
+    margin-top: -5px;
+  }
 }
 
 .implant-examples__image-box {

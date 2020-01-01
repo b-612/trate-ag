@@ -8634,13 +8634,12 @@
   }));
 //# sourceMappingURL=swiper.js.map
 
-  document.addEventListener('sliderMaked', function () {
-    window.swiperActivate.activateOffersSlider();
-  });
+  window.sliders.setSliderMakedListeners();
 
-  window.onload = function () {
-    window.swiperActivate.activateNewProductsSlider();
+  window.addEventListener('load', function () {
+    // window.swiperActivate.activateOffersSlider();
+    // window.swiperActivate.activateNewProductsSlider();
     window.swiperActivate.activateEventsSlider();
     window.swiperActivate.activateNewsSlider();
-  };
+  });
 })();

@@ -1,7 +1,15 @@
 .offers-slider {
   background-color: #d0d8e3;
 
+  @media (max-width: $mobile-max-width) {
+    overflow: visible;
+  }
+
   .offers-slider__list {
+    @media (max-width: $mobile-max-width) {
+      min-height: 248px;
+    }
+
     @media (min-width: $desktop-min-width) {
       min-height: 620px;
     }

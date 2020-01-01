@@ -1,6 +1,11 @@
 .new-products {
   background-color: $new-prod-section-background;
 
+  @media (max-width: $mobile-max-width) {
+    padding-top: 85px;
+    border-top: 4px solid $main-nav-bg;
+  }
+
   @media (min-width: $desktop-min-width) {
     padding-top: 59px;
     padding-bottom: 117px;

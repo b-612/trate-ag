@@ -86,9 +86,11 @@ $basal-ss-color: #6fbbcf;
 $examples-flag-fc: #ffffff;
 $examples-fc-hover: #323232;
 $examples-fc-active: #bcbcbc;
+$implant-border-fc: #efefef;
 
-/* Слайдер */
-$slide-title-fs: 44px;
+/* Слайдер предложений */
+$slide-title-fs-td: 44px;
+$slide-title-fs-m: 25px;
 $slide-lh: 1.4;
 $slide-title-line-color: #e33439;
 $slide-desc-fs: 16px;
@@ -98,6 +100,9 @@ $pagination-passive-color: #ffffff;
 $pagination-active-color: #e33439;
 $min-slider-desk-point: 1539px;
 $max-slider-desk-point: 1540px;
+$offers-link-fc-m: #ffffff;
+$offers-link-bg-m: #e33439;
+$offers-link-hover-bg-m: #c22a2e;
 
 /* Новинки */
 $new-prod-title-fc: #0d0d14;

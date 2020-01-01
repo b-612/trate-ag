@@ -10,9 +10,6 @@
     order: 'product__order'
   };
 
-  var newProdSlider = document.querySelector('.new-products__slider');
-  var orderLinks = Array.from(newProdSlider.querySelectorAll('.product__order'));
-
   var setRemoveHover = function (evt, isSet) {
     var wrapper = evt.target.closest('.' + textElemClassMap.wrapper);
 
@@ -41,6 +38,9 @@
   };
 
   var setOrderHoverListeners = function () {
+    var newProdSlider = document.querySelector('.new-products__slider');
+    var orderLinks = Array.from(newProdSlider.querySelectorAll('.product__order'));
+
     orderLinks.forEach(function (it) {
       it.addEventListener('mouseover', function (evt) {
         setRemoveHover(evt, true);
@@ -60,5 +60,7 @@
     });
   };
 
-  setOrderHoverListeners();
+  window.orderBtns = {
+    setOrderHoverListeners: setOrderHoverListeners
+  };
 })();
