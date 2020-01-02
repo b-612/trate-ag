@@ -125,6 +125,14 @@
 
 .new-products__slider {
   .swiper-arrows {
+    @media (max-width: $mobile-max-width) {
+      left: 50%;
+      top: 87px;
+
+      z-index: 5;
+      width: 98%;
+    }
+
     @media (min-width: $desktop-min-width) {
       bottom: -70px;
     }
@@ -135,9 +143,15 @@
   }
 
   .swiper-pagination-bullets {
-    top: 32px;
-    text-align: center;
-    transform: translateX(-50%);
+    @media (max-width: $mobile-max-width) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-min-width) {
+      top: 32px;
+      text-align: center;
+      transform: translateX(-50%);
+    }
   }
 }
 

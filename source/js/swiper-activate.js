@@ -53,9 +53,9 @@
       keyboard: true,
     });
 
-    window.addEventListener('load', function () {
+    window.setTimeout(function () {
       window.orderBtns.setOrderHoverListeners();
-    });
+    }, 500);
 
     activeSliders.push(newProductsSlider);
   };

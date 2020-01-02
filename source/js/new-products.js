@@ -50,7 +50,7 @@
     var productDesc = product.querySelector('.product__description');
     var productCategory = product.querySelector('.product__category-link');
     var productBtn = product.querySelector('.product__order');
-    var productPicture = product.querySelector('picture');
+    var productPicture = product.querySelector('.product__picture');
     var productSource = product.querySelector('source');
     var productImage = document.createElement('img');
 

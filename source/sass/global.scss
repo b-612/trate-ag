@@ -73,6 +73,11 @@ img {
   font-weight: normal;
   font-size: $section-title-fs;
   line-height: $section-title-lh;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .overlay {
