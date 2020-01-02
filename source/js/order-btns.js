@@ -21,10 +21,12 @@
     };
 
     for (var key in elements) {
-      if (isSet) {
-        elements[key].classList.add(textElemClassMap[key] + '--hover');
-      } else {
-        elements[key].classList.remove(textElemClassMap[key] + '--hover');
+      if (elements[key]) {
+        if (isSet) {
+          elements[key].classList.add(textElemClassMap[key] + '--hover');
+        } else {
+          elements[key].classList.remove(textElemClassMap[key] + '--hover');
+        }
       }
     }
 

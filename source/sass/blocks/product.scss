@@ -297,7 +297,9 @@
 }
 
 .product__image {
-  width: 100%;
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
 
   @media (min-width: $tablet-min-width) {
     position: absolute;
