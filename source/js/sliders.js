@@ -43,6 +43,8 @@
     }
 
     var sliderMaked = new Event(section.className + 'SliderMaked');
+
+
     var container = makeSlidesContainer();
     var slidesList = container.querySelector('.swiper-wrapper');
 

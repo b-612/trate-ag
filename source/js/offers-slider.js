@@ -77,4 +77,11 @@
   };
 
   window.backend.getSendData(window.data.OFFERS_DATA, window.backend.backendData.METHOD_FOR_GET, window.sliders.makeSlider, offerSection, containerClass, listClass, makeOffers, false, window.sliders.removeSlidesSection, false, 'offers');
+
+  window.offersSlider = {
+    offerSection: offerSection,
+    containerClass: containerClass,
+    listClass: listClass,
+    makeOffers: makeOffers
+  };
 })();

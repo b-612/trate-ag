@@ -5,7 +5,9 @@
 
   var UtilOption = {
     FRAGMENT: document.createDocumentFragment(),
+    MOBILE_MIN_WIDTH: 320,
     MOBILE_MAX_WIDTH: 767,
+    MOBILE_DIFFERENCE: 447,
     TABLET_MIN_WIDTH: 768,
     TABLET_MAX_WIDTH: 1279,
     DESKTOP_MIN_WIDTH: 1340,

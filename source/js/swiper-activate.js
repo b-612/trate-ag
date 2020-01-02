@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  var activeSliders = [];
+
   var activateOffersSlider = function () {
     var offersSlider = new Swiper ('.offers-slider', {
       // Optional parameters
@@ -24,6 +26,7 @@
       mousewheel: true,
       keyboard: true,
     });
+    activeSliders.push(offersSlider);
   };
 
   var activateNewProductsSlider = function () {
@@ -49,9 +52,12 @@
       mousewheel: true,
       keyboard: true,
     });
+
     window.addEventListener('load', function () {
       window.orderBtns.setOrderHoverListeners();
     });
+
+    activeSliders.push(newProductsSlider);
   };
 
   var activateEventsSlider = function () {
@@ -94,6 +100,7 @@
     activateOffersSlider: activateOffersSlider,
     activateNewProductsSlider: activateNewProductsSlider,
     activateEventsSlider: activateEventsSlider,
-    activateNewsSlider: activateNewsSlider
+    activateNewsSlider: activateNewsSlider,
+    activeSliders: activeSliders
   };
 })();
