@@ -159,6 +159,14 @@
   overflow: visible;
 
   .swiper-arrows {
+    @media (max-width: $mobile-max-width) {
+      top: 31px;
+      left: 50%;
+      z-index: 2;
+
+      width: 100%;
+    }
+
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-desk-point) {
       top: -87px;
     }

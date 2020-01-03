@@ -1,9 +1,24 @@
 .events {
   background-color: $events-bg;
 
+  @media (max-width: $mobile-max-width) {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
   @media (min-width: $desktop-min-width) {
     padding-top: 50px;
     padding-bottom: 48px;
+  }
+}
+
+.event__info {
+  @media (max-width: $mobile-max-width) {
+    margin-top: 104px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
   }
 }
 
