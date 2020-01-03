@@ -3,7 +3,7 @@
 
   @media (max-width: $mobile-max-width) {
     padding-top: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -13,7 +13,10 @@
 }
 
 .events__slider {
-  width: 280px;
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+    box-shadow: 0 0 0 3px $event-info-hover-bg;
+  }
 }
 
 .events-slider__list {
@@ -27,17 +30,22 @@
 .event__info {
   @media (max-width: $mobile-max-width) {
     width: 280px;
+    min-height: 160px;
     margin-top: 104px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 }
 
 .events__title {
   color: $events-title-fc;
   text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $desktop-min-width) {
     width: 1120px;
