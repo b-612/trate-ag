@@ -71,12 +71,17 @@ img {
 
   font-family: $daxline-pro;
   font-weight: normal;
-  font-size: $section-title-fs;
   line-height: $section-title-lh;
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 20px;
+
+    font-size: $section-title-fs-m;
     text-align: center;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    font-size: $section-title-fs;
   }
 }
 

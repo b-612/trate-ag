@@ -187,7 +187,13 @@
   }
 
   .swiper-button {
-    background-position: 0 -72px;
+    @media (max-width: $events-middle-mob-point) {
+      background-position: 0 0;
+    }
+
+    @media (min-width: $events-middle-mob-point) and (max-width: $mobile-max-width) {
+      background-position: 0 -72px;
+    }
 
     &:hover,
     &:focus {

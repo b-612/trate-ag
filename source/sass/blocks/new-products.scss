@@ -60,7 +60,6 @@
 
 .new-products__link {
   font-family: $daxline-pro;
-  font-size: $new-prod-link-fs;
   line-height: $new-prod-link-lh;
   color: $new-prod-link-fc;
 
@@ -69,7 +68,12 @@
   @media (max-width: $mobile-max-width) {
     margin-bottom: 25px;
 
+    font-size: $new-prod-link-fs-m;
     text-align: center;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    font-size: $new-prod-link-fs;
   }
 
   &:hover,
