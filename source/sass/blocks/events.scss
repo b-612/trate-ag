@@ -12,8 +12,21 @@
   }
 }
 
+.events__slider {
+  width: 280px;
+}
+
+.events-slider__list {
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .event__info {
   @media (max-width: $mobile-max-width) {
+    width: 280px;
     margin-top: 104px;
     padding-top: 10px;
     padding-left: 15px;
