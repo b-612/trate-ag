@@ -4,14 +4,14 @@
   var SliderSectionClass = [
     'offers',
     'new-products',
-    // 'events',
+    'events',
     // 'news'
   ];
 
   var SliderActivateFunction = [
     window.swiperActivate.activateOffersSlider,
     window.swiperActivate.activateNewProductsSlider,
-    // window.swiperActivate.activateEventsSlider,
+    window.swiperActivate.activateEventsSlider,
     // window.swiperActivate.activateNewsSlider
   ];
 
@@ -24,9 +24,14 @@
   };
 
   var sliderTemplate = document.querySelector('#swiper-slider');
+  var sliderTemplateNoPag = document.querySelector('#swiper-slider-no-pag');
 
-  var makeSlidesContainer = function () {
-    var sliderContainer = sliderTemplate.content.querySelector('.swiper-container').cloneNode(true);
+  var makeSlidesContainer = function (isPag) {
+    var sliderContainer;
+
+    sliderContainer = isPag ?
+      sliderTemplate.content.querySelector('.swiper-container').cloneNode(true) :
+      sliderTemplateNoPag.content.querySelector('.swiper-container').cloneNode(true);
 
     return sliderContainer;
   };
@@ -35,7 +40,7 @@
     section.remove();
   };
 
-  var makeSlider = function (slides, section, containerClass, listClass) {
+  var makeSlider = function (slides, section, containerClass, listClass, isPag) {
     var oldSwiperContainer = section.querySelector('.swiper-container');
 
     if (oldSwiperContainer) {
@@ -45,7 +50,7 @@
     var sliderMaked = new Event(section.className + 'SliderMaked');
 
 
-    var container = makeSlidesContainer();
+    var container = makeSlidesContainer(isPag);
     var slidesList = container.querySelector('.swiper-wrapper');
 
     container.classList.add(containerClass);

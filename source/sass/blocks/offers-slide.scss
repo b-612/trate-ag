@@ -40,6 +40,8 @@
   line-height: $slide-lh;
   color: $slide-color;
 
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
+
   @media (max-width: $mobile-max-width) {
     width: 280px;
     margin-bottom: 20px;
@@ -71,6 +73,8 @@
   font-weight: normal;
   font-size: $slide-desc-fs;
   line-height: $slide-lh;
+
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 20px;

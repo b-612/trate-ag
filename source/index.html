@@ -379,68 +379,6 @@
       <section class="events">
         <div class="container">
           <h2 class="events__title section-title">Ближайшие мероприятия</h2>
-
-          <div class="swiper-container events__slider">
-            <div class="swiper-arrows">
-              <button class="swiper-button swiper-button-prev" type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-
-              <button class="swiper-button swiper-button-next" type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
-            </div>
-
-            <ul class="swiper-wrapper default-list">
-              <li class="swiper-slide">
-                <ul class="events__list default-list">
-                  <li class="events__event event" style="background-image: url('img/conf-td.jpg')">
-                    <a class="event__link" href="#">
-                      <div class="event__info">
-                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
-                        <h3 class="event__title">Конометрическая фиксация протезов</h3>
-                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="events__event event" style="background-image: url('img/traning-td.jpg')">
-                    <a class="event__link" href="#">
-                      <div class="event__info">
-                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
-                        <h3 class="event__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="swiper-slide">
-                <ul class="events__list default-list">
-                  <li class="events__event event" style="background-image: url('img/traning-td.jpg')">
-                    <a class="event__link" href="#">
-                      <div class="event__info">
-                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
-                        <h3 class="event__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="events__event event" style="background-image: url('img/conf-td.jpg')">
-                    <a class="event__link" href="#">
-                      <div class="event__info">
-                        <time class="event__date" datetime="2019-12-12">12 декабря</time>
-                        <h3 class="event__title">Конометрическая фиксация протезов</h3>
-                        <p class="event__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 
@@ -736,7 +674,7 @@
 
     <div class="overlay overlay--hidden"></div>
 
-    <!-- Слайдер Swiper-->
+    <!-- Слайдер Swiper c пагинацией-->
     <template id="swiper-slider">
       <div class="swiper-container">
         <div class="swiper-arrows">
@@ -749,13 +687,28 @@
           </button>
         </div>
 
-        <ul class="swiper-wrapper default-list">
-
-        </ul>
+        <ul class="swiper-wrapper default-list"></ul>
 
         <div class="container">
           <div class="swiper-pagination"></div>
         </div>
+      </div>
+    </template>
+
+    <!-- Слайдер Swiper без пагинации-->
+    <template id="swiper-slider-no-pag">
+      <div class="swiper-container">
+        <div class="swiper-arrows">
+          <button class="swiper-button swiper-button-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+
+          <button class="swiper-button swiper-button-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
+
+        <ul class="swiper-wrapper default-list"></ul>
       </div>
     </template>
 
@@ -770,18 +723,14 @@
       </li>
     </template>
 
-    <!-- Слайд в слайдере -->
-    <template id="new-products-slide">
-      <li class="swiper-slide"></li>
-    </template>
-
-    <!-- Слайд в слайдере с несколькими блоками -->
-    <template id="new-products-slide-list">
+    <!-- Слайд в слайдере new-products с несколькими блоками -->
+    <template id="slide-list">
       <li class="swiper-slide">
         <ul class="default-list"></ul>
       </li>
     </template>
 
+  <!--  Карточка продукта в слайдере new-products -->
     <template id="new-product">
       <li class="new-products__product product">
         <div class="product__text-wrapper">
@@ -798,6 +747,21 @@
       </li>
     </template>
 
+
+
+  <!-- Карточка из секции events -->
+    <template id="event">
+      <li class="events__event event">
+        <a class="event__link" href="#">
+          <div class="event__info">
+            <time class="event__date" datetime="2019-12-12">12 декабря</time>
+            <h3 class="event__title">Конометрическая фиксация протезов</h3>
+            <p class="event__description">Присоединяйтесь к международной научной конференции</p>
+          </div>
+        </a>
+      </li>
+    </template>
+
   <script src="js/picturefill.min.js"></script>
   <script src="js/closest-ie11.min.js"></script>
 
@@ -807,11 +771,12 @@
   <script src="js/nav-toggle.min.js"></script>
   <script src="js/main-nav.min.js"></script>
   <script src="js/responsive.min.js"></script>
-  <script src="js/order-btns.js"></script>
+  <script src="js/order-btns.min.js"></script>
   <script src="js/swiper-activate.js"></script>
-  <script src="js/sliders.min.js"></script>
-  <script src="js/offers-slider.min.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/offers-slider.js"></script>
   <script src="js/new-products.min.js"></script>
+  <script src="js/events.js"></script>
 
   <script src="js/slider-active-elements.min.js"></script>
   <script src="js/swiper-script.min.js"></script>

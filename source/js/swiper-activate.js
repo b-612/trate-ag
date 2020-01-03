@@ -61,7 +61,7 @@
   };
 
   var activateEventsSlider = function () {
-    var newProductsSlider = new Swiper ('.events__slider', {
+    var eventsSlider = new Swiper ('.events__slider', {
       // Optional parameters
       cssMode: true,
       direction: 'horizontal',
@@ -76,6 +76,7 @@
       mousewheel: true,
       keyboard: true,
     });
+    activeSliders.push(eventsSlider);
   };
 
   var activateNewsSlider = function () {

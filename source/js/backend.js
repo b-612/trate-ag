@@ -31,7 +31,7 @@
     return xhr.response;
   };
 
-  var setLoadCallback = function (xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName) {
+  var setLoadCallback = function (xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName, isPag) {
     xhr.addEventListener('load', function () {
       var xhrResult = null;
 
@@ -39,7 +39,7 @@
         if (method === backendData.METHOD_FOR_GET) {
           xhrResult = xhr.response;
           var result = getFunc(xhr.response);
-          onLoad(result, section, containerClassList, listClassList);
+          onLoad(result, section, containerClassList, listClassList, isPag);
         } else {
           postFunc();
         }
@@ -51,11 +51,11 @@
     });
   };
 
-  var getSendData = function (dataUrl, method, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, sendData, resultName) {
+  var getSendData = function (dataUrl, method, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, sendData, resultName, isPag) {
     var xhr = getXhr();
 
     getXhrParams(xhr, dataUrl, method, window.backend.backendData.REQUEST_TIMEOUT, sendData);
-    setLoadCallback(xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName);
+    setLoadCallback(xhr, onLoad, section, containerClassList, listClassList, getFunc, postFunc, onError, method, resultName, isPag);
   };
 
   window.backend = {

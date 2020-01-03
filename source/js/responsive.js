@@ -33,9 +33,11 @@
       it.destroy();
     });
 
-    window.sliders.makeSlider(window.offersSlider.makeOffers(window.backend.xhrResults.offers), window.offersSlider.offerSection, window.offersSlider.containerClass, window.offersSlider.listClass);
+    window.sliders.makeSlider(window.offersSlider.makeOffers(window.backend.xhrResults.offers), window.offersSlider.offerSection, window.offersSlider.containerClass, window.offersSlider.listClass, true);
 
-    window.sliders.makeSlider(window.newProducts.makeSlides(window.backend.xhrResults.newProducts, true), window.newProducts.newProductsSection, window.newProducts.containerClass, window.newProducts.listClass);
+    window.sliders.makeSlider(window.newProducts.makeSlides(window.backend.xhrResults.newProducts, true), window.newProducts.newProductsSection, window.newProducts.containerClass, window.newProducts.listClass, true);
+
+    window.sliders.makeSlider(window.events.makeSlides(window.backend.xhrResults.events, true), window.events.eventsSection, window.events.containerClass, window.events.listClass, false);
   });
 
   checkWindowSize();
