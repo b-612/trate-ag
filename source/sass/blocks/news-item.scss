@@ -7,6 +7,15 @@
   transition-property: background-color;
   transition-duration: $short-transition;
 
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+    min-height: 355px;
+
+    background-size: 250px auto;
+    background-position: 15px 15px;
+    background-color: $news-item-hover-bg;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 426px;
     background-size: 387px 153px;
@@ -49,12 +58,16 @@
 }
 
 .news-item__info {
-  margin-top: 153px;
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (max-width: $mobile-max-width) {
+    margin-top: 125px;
+  }
+
   @media (min-width: $desktop-min-width) {
     min-height: 226px;
+    margin-top: 153px;
     padding-top: 30px;
     padding-bottom: 20px;
   }
@@ -63,6 +76,10 @@
 .news-item__date {
   display: block;
   opacity: 0.6;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .news-item__title {

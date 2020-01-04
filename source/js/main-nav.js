@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  var FIX_AFTER = 375;
+
   var body = document.querySelector('body');
   var elementNavClosedMap = {
     'navToggle': 'nav-toggle--closed',
@@ -246,6 +248,14 @@
     });
   };
 
+  var onPageScroll = function () {
+    if (pageYOffset > FIX_AFTER) {
+      mainNav.classList.add('main-nav--fixed');
+    } else {
+      mainNav.classList.remove('main-nav--fixed');
+    }
+  };
+
   ToggleElements.navToggle.addEventListener('click', onNavToggleClick);
 
   window.mainNav = {
@@ -255,6 +265,7 @@
     addMobileListeners: addMobileListeners,
     removeDesktopListeners: removeDesktopListeners,
     removeMobileListeners: removeMobileListeners,
-    onItemMouseoutDesk: onItemMouseoutDesk
+    onItemMouseoutDesk: onItemMouseoutDesk,
+    onPageScroll: onPageScroll
   };
 })();

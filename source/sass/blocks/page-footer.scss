@@ -5,6 +5,11 @@
 
   background-color: $footer-bg;
 
+  @media (max-width: $mobile-max-width) {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
   @media (min-width: $desktop-min-width) {
     padding-top: 64px;
     padding-bottom: 55px;
@@ -17,6 +22,15 @@
 }
 
 .page-footer__wrapper {
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 188px;
     margin-bottom: 20px;
@@ -29,6 +43,10 @@
   }
 
   &--copyright {
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 20px;
+    }
+
     @media (min-width: $desktop-min-width) {
       display: flex;
       flex-direction: column;
@@ -41,17 +59,29 @@
   }
 
   &--info {
-    width: 196px;
+    @media (min-width: $tablet-min-width) {
+      width: 196px;
+    }
   }
 }
 
 .page-footer__logo {
-  margin-bottom: 30px;
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .page-footer__copyright {
   margin-top: 0;
   margin-bottom: 5px;
+
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
 
   @media (min-width: $desktop-min-width) {
     width: 160px;
@@ -83,9 +113,13 @@
 }
 
 .page-footer__socials {
-  justify-content: flex-end;
+  @media (max-width: $mobile-max-width) {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
 
   @media (min-width: $desktop-min-width) {
+    justify-content: flex-end;
     max-width: 196px;
     margin-bottom: 20px;
   }

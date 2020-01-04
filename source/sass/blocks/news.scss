@@ -1,6 +1,10 @@
 .news {
   background-color: $news-bg;
 
+  @media (max-width: $mobile-max-width) {
+    padding-top: 35px;
+  }
+
   @media (min-width: $desktop-min-width) {
     padding-top: 52px;
   }
@@ -20,6 +24,10 @@
 }
 
 .news__slider {
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+  }
+
   .swiper-slide {
     display: flex;
   }

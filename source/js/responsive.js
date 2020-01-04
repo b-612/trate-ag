@@ -2,28 +2,33 @@
 
 (function () {
   var checkWindowSize = function () {
-    if (window.matchMedia('(max-width: ' + window.util.TABLET_MAX_WIDTH + 'px').matches) {
+    if (window.matchMedia('(max-width: ' + window.util.MOBILE_MAX_WIDTH + 'px').matches) {
       window.mainNav.toggleNav();
       window.mainNav.addMobileListeners();
+      window.addEventListener('scroll', window.mainNav.onPageScroll);
     }
 
-    if (screen.width > window.util.TABLET_MAX_WIDTH) {
+    if (screen.width > window.util.MOBILE_MAX_WIDTH) {
       window.mainNav.addDesktopListeners();
       window.mainNav.removeMobileListeners();
+      window.removeEventListener('scroll', window.mainNav.onPageScroll);
     }
   };
 
   var onWindowResize = window.util.debounce(function () {
-    if (screen.width <= window.util.TABLET_MIN_WIDTH) {
+    if (screen.width < window.util.TABLET_MIN_WIDTH) {
       window.mainNav.toggleNavFromResize();
       window.mainNav.removeMobileListeners();
       window.mainNav.removeDesktopListeners();
       window.mainNav.addMobileListeners();
+      window.removeEventListener('scroll', window.mainNav.onPageScroll);
+      window.addEventListener('scroll', window.mainNav.onPageScroll);
     }
 
-    if (screen.width > window.util.TABLET_MAX_WIDTH) {
+    if (screen.width > window.util.MOBILE_MAX_WIDTH) {
       window.mainNav.removeDesktopListeners();
       window.mainNav.removeMobileListeners();
+      window.removeEventListener('scroll', window.mainNav.onPageScroll);
       window.mainNav.addDesktopListeners();
     }
 
