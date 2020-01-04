@@ -5,14 +5,14 @@
     'offers',
     'new-products',
     'events',
-    // 'news'
+    'news'
   ];
 
   var SliderActivateFunction = [
     window.swiperActivate.activateOffersSlider,
     window.swiperActivate.activateNewProductsSlider,
     window.swiperActivate.activateEventsSlider,
-    // window.swiperActivate.activateNewsSlider
+    window.swiperActivate.activateNewsSlider
   ];
 
   var setSliderMakedListeners = function () {

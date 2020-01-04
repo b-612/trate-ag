@@ -1,18 +1,12 @@
 'use strict';
 
 (function () {
-  var DESK_SLIDER_RATE = 6;
-  var TABLET_SLIDER_RATE = 4;
-  var MOBILE_SLIDER_RATE = 2;
   var DETAIL_IMG_MAX_WIDTH = 180;
   var IMG_MAX_WIDTH = 405;
 
   var containerClass = 'new-products__slider';
   var itemListClass = 'new-products__list';
   var listClass = 'new-products-slider__list';
-  var rate = 0;
-  var rateCounter = 0;
-  var maxRate = 0;
 
   var newProductTemplate = document.querySelector('#new-product');
   var productExample = newProductTemplate.content.querySelector('.product');
@@ -98,57 +92,54 @@
   };
 
   var pushItemsInSlide = function (maxR, element, i, allSlides) {
-    if (rateCounter === 0 || rateCounter === maxR) {
-      slideItem = slideListItem.cloneNode(true);
-      slideList = slideItem.querySelector('ul');
-
-      if (rateCounter === maxR || i === 0) {
-        allSlides.push(slideItem);
-        rateCounter = 0;
-      }
-
-      slideList.classList.add(itemListClass);
+    if (i === 0) {
+      window.util.RATE = 0;
+      window.util.RATE_COUNTER = 0;
     }
 
-    if (rateCounter < maxR) {
+    if (window.util.RATE_COUNTER === 0 || window.util.RATE_COUNTER >= maxR) {
+      slideItem = slideListItem.cloneNode(true);
+      slideList = slideItem.querySelector('ul');
+      slideList.classList.add(itemListClass);
+      allSlides.push(slideItem);
+      window.util.RATE_COUNTER = 0;
+    }
+
+    if (window.util.RATE_COUNTER < maxR) {
       slideList.appendChild(element);
 
-      rate = element.classList.contains('product--big') ?
+      window.util.RATE = element.classList.contains('product--big') ?
         2 : 1;
 
-      rateCounter = rateCounter + rate;
+      window.util.RATE_COUNTER = window.util.RATE_COUNTER + window.util.RATE;
     }
   };
 
-  var makeSlides = function (productsData, isResize) {
-    if (isResize) {
-      rateCounter = 0;
-    }
-
+  var makeSlides = function (productsData) {
     var allProducts = makeAllProducts(productsData);
     var allSlides = [];
 
     switch (true) {
       case screen.width >= window.util.DESKTOP_MIN_WIDTH :
-        maxRate = DESK_SLIDER_RATE;
+        window.util.MAX_RATE = window.util.DESK_SLIDER_RATE;
         break;
 
       case screen.width >= window.util.TABLET_MIN_WIDTH :
-        maxRate = TABLET_SLIDER_RATE;
+        window.util.MAX_RATE = window.util.TABLET_SLIDER_RATE;
         break;
 
       default :
-        maxRate = MOBILE_SLIDER_RATE;
+        window.util.MAX_RATE = window.util.MOBILE_SLIDER_RATE;
     }
 
-    if (maxRate === MOBILE_SLIDER_RATE) {
+    if (window.util.MAX_RATE === window.util.MOBILE_SLIDER_RATE) {
       allProducts.forEach(function (it) {
         it.classList.add('swiper-slide');
         allSlides.push(it);
       });
     } else {
       allProducts.forEach(function (it, i) {
-        pushItemsInSlide(maxRate, it, i, allSlides, isResize);
+        pushItemsInSlide(window.util.MAX_RATE, it, i, allSlides);
       });
     }
 
@@ -161,6 +152,7 @@
     newProductsSection: newProductsSection,
     containerClass: containerClass,
     listClass: listClass,
+    pushItemsInSlide: pushItemsInSlide,
     makeSlides: makeSlides
   };
 })();

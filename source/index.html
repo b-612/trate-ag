@@ -427,88 +427,6 @@
       <section class="news">
         <div class="container">
           <h2 class="news__title section-title">Новости</h2>
-
-          <div class="swiper-container news__slider">
-            <div class="swiper-arrows">
-              <button class="swiper-button swiper-button-prev" type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-
-              <button class="swiper-button swiper-button-next" type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
-            </div>
-
-            <ul class="swiper-wrapper default-list">
-              <li class="swiper-slide">
-                <ul class="news__list default-list">
-                  <li class="news__news-item news-item" style="background-image: url('img/november-25.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">25 ноября</time>
-                        <h3 class="news-item__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="news-item__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="news__news-item news-item" style="background-image: url('img/november-18.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">18 ноября</time>
-                        <h3 class="news-item__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="news-item__description">Для немедленных бесцементных и безвинтовых реставраций по запатентованной технологии</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="news__news-item news-item" style="background-image: url('img/november-07.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">07 ноября</time>
-                        <h3 class="news-item__title">Прогрессивные технологии современной стоматологии</h3>
-                        <p class="news-item__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="swiper-slide">
-                <ul class="news__list default-list">
-                  <li class="news__news-item news-item" style="background-image: url('img/november-18.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">18 ноября</time>
-                        <h3 class="news-item__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="news-item__description">Для немедленных бесцементных и безвинтовых реставраций по запатентованной технологии</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="news__news-item news-item" style="background-image: url('img/november-07.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">07 ноября</time>
-                        <h3 class="news-item__title">Прогрессивные технологии современной стоматологии</h3>
-                        <p class="news-item__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="news__news-item news-item" style="background-image: url('img/november-25.jpg')">
-                    <a class="news-item__link" href="#">
-                      <div class="news-item__info">
-                        <time class="news-item__date" datetime="2019-12-12">25 ноября</time>
-                        <h3 class="news-item__title">Тренинг Конометрическая фиксация протезов</h3>
-                        <p class="news-item__description">Присоединяйтесь к международной научной конференции</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
     </main>
@@ -733,7 +651,7 @@
       </li>
     </template>
 
-  <!--  Карточка продукта в слайдере new-products -->
+    <!--  Карточка продукта в слайдере new-products -->
     <template id="new-product">
       <li class="new-products__product product">
         <div class="product__text-wrapper">
@@ -750,9 +668,7 @@
       </li>
     </template>
 
-
-
-  <!-- Карточка из секции events -->
+    <!-- Карточка из секции events -->
     <template id="event">
       <li class="events__event event">
         <a class="event__link" href="#">
@@ -765,21 +681,35 @@
       </li>
     </template>
 
+    <!-- Карточка новости -->
+    <template id="news-item">
+      <li class="news__news-item news-item">
+        <a class="news-item__link" href="#">
+          <div class="news-item__info">
+            <time class="news-item__date" datetime="2019-12-12">18 ноября</time>
+            <h3 class="news-item__title">Тренинг Конометрическая фиксация протезов</h3>
+            <p class="news-item__description">Для немедленных бесцементных и безвинтовых реставраций по запатентованной технологии</p>
+          </div>
+        </a>
+      </li>
+    </template>
+
   <script src="js/picturefill.min.js"></script>
   <script src="js/closest-ie11.min.js"></script>
 
   <script src="js/util.min.js"></script>
   <script src="js/data.min.js"></script>
-  <script src="js/backend.min.js"></script>
+  <script src="js/backend.js"></script>
   <script src="js/nav-toggle.min.js"></script>
   <script src="js/main-nav.min.js"></script>
   <script src="js/responsive.min.js"></script>
   <script src="js/order-btns.min.js"></script>
   <script src="js/swiper-activate.min.js"></script>
-  <script src="js/sliders.min.js"></script>
+  <script src="js/sliders.js"></script>
   <script src="js/offers-slider.min.js"></script>
-  <script src="js/new-products.min.js"></script>
-  <script src="js/events.min.js"></script>
+  <script src="js/new-products.js"></script>
+  <script src="js/events-slider.js"></script>
+  <script src="js/news-slider.js"></script>
 
   <script src="js/slider-active-elements.min.js"></script>
   <script src="js/swiper-script.min.js"></script>

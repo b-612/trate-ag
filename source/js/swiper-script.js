@@ -8635,11 +8635,4 @@
 //# sourceMappingURL=swiper.js.map
 
   window.sliders.setSliderMakedListeners();
-
-  window.addEventListener('load', function () {
-    // window.swiperActivate.activateOffersSlider();
-    // window.swiperActivate.activateNewProductsSlider();
-    // window.swiperActivate.activateEventsSlider();
-    window.swiperActivate.activateNewsSlider();
-  });
 })();
