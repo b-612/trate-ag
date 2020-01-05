@@ -160,9 +160,8 @@
 
   .swiper-arrows {
     @media (max-width: $events-middle-mob-point) {
-      top: 31px;
-
-      width: 280px;
+      top: -90px;
+      width: 108%;
     }
 
     @media (max-width: $mobile-max-width) {

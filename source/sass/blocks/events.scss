@@ -15,7 +15,7 @@
 .events__slider {
   @media (max-width: $mobile-max-width) {
     width: 280px;
-    box-shadow: 0 0 0 3px $event-info-hover-bg;
+    box-shadow: 0 0 0 3px #b9b9b9;
   }
 }
 

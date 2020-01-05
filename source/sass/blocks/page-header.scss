@@ -1,12 +1,13 @@
 .page-header {
-  display: block;
-
   @media (max-width: $mobile-max-width) {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 16px;
     border-bottom: 4px solid $main-nav-bg;
   }
 
   @media (min-width: $desktop-min-width) {
+    display: block;
     padding-bottom: 13px;
   }
 }

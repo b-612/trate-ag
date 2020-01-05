@@ -2,6 +2,7 @@
   @media (max-width: $mobile-max-width) {
     display: flex;
     flex-wrap: wrap;
+    order: 1;
     justify-content: center;
     margin-left: -15px;
   }

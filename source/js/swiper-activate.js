@@ -9,6 +9,7 @@
       cssMode: true,
       direction: 'horizontal',
       loop: true,
+      simulateTouch: false,
 
       // If we need pagination
       pagination: {
@@ -35,6 +36,7 @@
       cssMode: true,
       direction: 'horizontal',
       loop: true,
+      simulateTouch: false,
 
       // If we need pagination
       pagination: {
@@ -66,6 +68,7 @@
       cssMode: true,
       direction: 'horizontal',
       loop: true,
+      simulateTouch: false,
 
       // Navigation arrows
       navigation: {
@@ -85,6 +88,7 @@
       cssMode: true,
       direction: 'horizontal',
       loop: true,
+      simulateTouch: false,
 
       // Navigation arrows
       navigation: {

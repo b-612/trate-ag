@@ -1,6 +1,28 @@
 .top-line {
   background-color: $top-line-bg;
 
+  @media (max-width: $mobile-max-width) {
+    order: 1;
+    margin-top: 69px;
+    margin-bottom: 30px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-max-width) {
+      content: "";
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      width: 100%;
+      height: 69px;
+      display: block;
+      background-color: $main-nav-bg;
+    }
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;

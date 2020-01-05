@@ -1,8 +1,6 @@
 'use strict';
 
 (function () {
-  var FIX_AFTER = 375;
-
   var body = document.querySelector('body');
   var elementNavClosedMap = {
     'navToggle': 'nav-toggle--closed',
@@ -16,7 +14,6 @@
     'mainNavList': 'main-nav__list--opened'
   };
 
-  var overlay = document.querySelector('.overlay');
   var mainNav = document.querySelector('.main-nav');
 
   var ToggleElements = {
@@ -26,8 +23,6 @@
   };
 
   var Animations = {
-    navAnimationOpen: 'main-nav-animation-open',
-    navAnimationClose: 'main-nav-animation-close',
     listAnimationDesk: 'nesting-list-animation-desk',
     listAnimationMobile: 'nesting-list-animation-mobile',
     linkAnimation: 'nesting-link-animation',
@@ -65,6 +60,10 @@
   };
 
   var closeNav = function () {
+    window.setTimeout(function () {
+      ToggleElements.mainNavList.classList.add('hidden');
+    }, 450);
+
     hideLists(nestingLists, Animations.listAnimationMobile);
 
     for (var key in ToggleElements) {
@@ -73,32 +72,20 @@
       }
     }
 
-    if (mainNav.classList.contains(Animations.navAnimationOpen)) {
-      mainNav.classList.remove(Animations.navAnimationOpen);
-    }
-
     body.removeAttribute('style');
-
-    if (!overlay.classList.contains('overlay--hidden')) {
-      overlay.classList.add('overlay--hidden');
-    }
   };
 
   var openNav = function () {
+
     for (var key in ToggleElements) {
       if (ToggleElements.hasOwnProperty(key)) {
         toggleClasses(ToggleElements[key], elementNavOpenedMap[key], '--closed');
       }
     }
 
-    ToggleElements.mainNav.classList.add(Animations.navAnimationOpen);
-
     ToggleElements.mainNav.focus();
     body.style = 'overflow-y: hidden';
-
-    if (overlay.classList.contains('overlay--hidden')) {
-      overlay.classList.remove('overlay--hidden');
-    }
+    ToggleElements.mainNavList.classList.remove('hidden');
   };
 
   var toggleNav = function () {
@@ -248,14 +235,6 @@
     });
   };
 
-  var onPageScroll = function () {
-    if (pageYOffset > FIX_AFTER) {
-      mainNav.classList.add('main-nav--fixed');
-    } else {
-      mainNav.classList.remove('main-nav--fixed');
-    }
-  };
-
   ToggleElements.navToggle.addEventListener('click', onNavToggleClick);
 
   window.mainNav = {
@@ -265,7 +244,6 @@
     addMobileListeners: addMobileListeners,
     removeDesktopListeners: removeDesktopListeners,
     removeMobileListeners: removeMobileListeners,
-    onItemMouseoutDesk: onItemMouseoutDesk,
-    onPageScroll: onPageScroll
+    onItemMouseoutDesk: onItemMouseoutDesk
   };
 })();

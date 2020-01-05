@@ -1,5 +1,6 @@
 .header-info {
   @media (max-width: $mobile-max-width) {
+    order: 1;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -140,7 +141,7 @@
     margin-right: 17px;
     margin-bottom: 6px;
 
-    background-image: url("../../img/basket.svg");
+    background-image: url("../img/basket.svg");
     background-repeat: no-repeat;
     background-size: 36px 108px;
     background-position: 0 -1px;
