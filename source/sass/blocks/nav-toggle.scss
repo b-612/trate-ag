@@ -2,6 +2,10 @@
   @media (max-width: $mobile-max-width) {
     display: none;
 
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 1s;
+
     &--with-js {
       display: block;
       border: none;

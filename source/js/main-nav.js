@@ -47,8 +47,15 @@
       element.classList.remove(removingClass);
     }
 
-    if (element === ToggleElements.navToggle && !element.classList.contains('nav-toggle--with-js')) {
-      element.classList.add('nav-toggle--with-js');
+    if (element === ToggleElements.navToggle) {
+      element.classList.add('visually-hidden');
+      window.setTimeout(function () {
+        element.classList.remove('visually-hidden');
+      }, 400);
+
+      if (!element.classList.contains('nav-toggle--with-js')) {
+        element.classList.add('nav-toggle--with-js');
+      }
     }
 
     element.classList.add(addClass);
@@ -76,20 +83,22 @@
   };
 
   var openNav = function () {
-
     for (var key in ToggleElements) {
       if (ToggleElements.hasOwnProperty(key)) {
         toggleClasses(ToggleElements[key], elementNavOpenedMap[key], '--closed');
       }
     }
 
-    ToggleElements.mainNav.focus();
     body.style = 'overflow-y: hidden';
     ToggleElements.mainNavList.classList.remove('hidden');
   };
 
   var toggleNav = function () {
     window.navToggle.toggleElement(window.navToggle.checkIsElemClosed(ToggleElements.navToggle, 'nav-toggle--closed'), openNav, closeNav, ToggleElements.navToggle);
+
+    window.setTimeout(function () {
+      ToggleElements.navToggle.focus();
+    }, 405);
   };
 
   var toggleNavFromResize = function () {
