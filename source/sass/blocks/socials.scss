@@ -45,5 +45,7 @@
 .socials__icon {
   width: 28px;
   height: 27px;
-  //border-radius: 50%;
+
+  transition-property: filter;
+  transition-duration: $short-transition;
 }

@@ -2,7 +2,8 @@
 $mobile-min-width: 320px;
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
-$tablet-max-width: 1279px;
+$tablet-middle-point: 999px;
+$tablet-max-width: 1339px;
 $desktop-min-width: 1340px;
 $desktop-max-width: 1920px;
 
@@ -37,7 +38,7 @@ $account-fs: 14px;
 $account-lh: 1.2;
 
 /* Иконки соц. сетей */
-$socials-shadow-color: rgba(155, 155, 155, 0.7);
+$socials-shadow-color: #e33439;
 
 /* Инфо блок в хедере */
 $main-title-fs: 16px;

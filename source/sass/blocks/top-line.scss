@@ -1,28 +1,6 @@
 .top-line {
   background-color: $top-line-bg;
 
-  @media (max-width: $mobile-max-width) {
-    order: 1;
-    margin-top: 69px;
-    margin-bottom: 30px;
-  }
-
-  &::before {
-    @media (max-width: $mobile-max-width) {
-      content: "";
-
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 2;
-
-      width: 100%;
-      height: 69px;
-      display: block;
-      background-color: $main-nav-bg;
-    }
-  }
-
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +9,11 @@
     @media (max-width: $mobile-max-width) {
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      padding-top: 10px;
+      padding-bottom: 8px;
     }
 
     @media (min-width: $desktop-min-width) {
@@ -47,6 +30,14 @@
 
   @media (max-width: $mobile-max-width) {
     width: 48%;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    margin-right: 40px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    max-width: 290px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -116,14 +107,14 @@
 }
 
 .top-line__socials {
+  margin-left: auto;
+
   @media (max-width: $mobile-max-width) {
     justify-content: flex-end;
     width: 48%;
-    margin-left: auto;
   }
 
   @media (min-width: $desktop-min-width) {
     max-width: 406px;
-    margin-left: auto;
   }
 }

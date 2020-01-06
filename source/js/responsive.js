@@ -4,12 +4,12 @@
   var windowWidth = screen.width;
 
   var checkWindowSize = function () {
-    if (window.matchMedia('(max-width: ' + window.util.MOBILE_MAX_WIDTH + 'px').matches) {
+    if (screen.width <= window.util.TABLET_MAX_WIDTH) {
       window.mainNav.toggleNav();
       window.mainNav.addMobileListeners();
     }
 
-    if (screen.width > window.util.MOBILE_MAX_WIDTH) {
+    if (screen.width > window.util.TABLET_MAX_WIDTH) {
       window.mainNav.addDesktopListeners();
       window.mainNav.removeMobileListeners();
     }
@@ -26,7 +26,15 @@
         window.mainNav.addMobileListeners();
       }
 
-      if (screen.width > window.util.MOBILE_MAX_WIDTH) {
+      if (screen.width > window.util.MOBILE_MAX_WIDTH && screen.width < window.util.DESKTOP_MIN_WIDTH) {
+        window.mainNav.toggleNavFromResize();
+        window.mainNav.removeDesktopListeners();
+        window.mainNav.removeMobileListeners();
+        window.mainNav.addMobileListeners();
+      }
+
+      if (screen.width >= window.util.DESKTOP_MIN_WIDTH) {
+        window.mainNav.toggleNavFromResize();
         window.mainNav.removeDesktopListeners();
         window.mainNav.removeMobileListeners();
         window.mainNav.addDesktopListeners();
