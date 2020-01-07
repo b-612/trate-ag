@@ -27,20 +27,17 @@
     &--opened {
       position: fixed;
 
+      width: 100vw;
       height: 100vh;
       padding-top: 52px;
       padding-bottom: 20px;
       overflow-y: scroll;
 
-      background-image: linear-gradient(95deg, #e33439 435px, #c22a2e 435px);
+      background-image: linear-gradient(95deg, #e33439 460px, #c22a2e 460px);
 
       animation-name: mainNavOpen;
       animation-duration: 0.5s;
       animation-timing-function: ease-out;
-
-      @media (max-width: $mobile-max-width) {
-        width: 100vw;
-      }
 
       .container {
         @media (max-width: $nav-mob-max-width) {
@@ -366,20 +363,26 @@
 @keyframes mainNavOpen {
   0% {
     transform: translateY(-87%);
+    filter: blur(10px);
   }
 
   100% {
     transform: translateY(0%);
+    filter: blur(0);
   }
 }
 
 @keyframes mainNavClose {
   0% {
     transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0);
   }
 
   100% {
     transform: translateY(-88%);
+    opacity: 0;
+    filter: blur(10px);
   }
 }
 

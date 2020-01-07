@@ -48,7 +48,7 @@
       element.classList.add('visually-hidden');
       window.setTimeout(function () {
         element.classList.remove('visually-hidden');
-      }, 400);
+      }, 500);
 
       if (!element.classList.contains('nav-toggle--with-js')) {
         element.classList.add('nav-toggle--with-js');
@@ -68,7 +68,7 @@
       if (screen.width <= window.util.MOB_NAV_MAX_WIDTH) {
         ToggleElements.mainNavList.classList.add('hidden');
       }
-    }, 450);
+    }, 500);
 
     hideLists(nestingLists);
 
