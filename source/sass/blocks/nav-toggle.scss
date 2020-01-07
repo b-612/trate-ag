@@ -1,5 +1,5 @@
 .nav-toggle {
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     display: none;
 
     cursor: pointer;
@@ -56,13 +56,13 @@
     }
   }
 
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: $nav-desk-min-width) {
     display: none;
   }
 }
 
 .nav-toggle__line {
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     display: block;
 
     width: 45px;

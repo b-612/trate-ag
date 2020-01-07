@@ -65,7 +65,7 @@
 
   var closeNav = function () {
     window.setTimeout(function () {
-      if (screen.width <= window.util.MOBILE_MAX_WIDTH) {
+      if (screen.width <= window.util.MOB_NAV_MAX_WIDTH) {
         ToggleElements.mainNavList.classList.add('hidden');
       }
     }, 450);
@@ -107,7 +107,7 @@
 
     toggleNav();
 
-    if (screen.width > window.util.MOBILE_MAX_WIDTH) {
+    if (screen.width > window.util.MOB_NAV_MAX_WIDTH) {
       ToggleElements.mainNavList.classList.remove('hidden');
     }
   };

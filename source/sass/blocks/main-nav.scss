@@ -6,6 +6,9 @@
 
   @media (max-width: $mobile-max-width) {
     position: fixed;
+  }
+
+  @media (max-width: $nav-mob-max-width) {
     top: 0;
     z-index: 5;
 
@@ -22,18 +25,25 @@
     }
 
     &--opened {
-      width: 100vw;
+      position: fixed;
+
       height: 100vh;
       padding-top: 52px;
       padding-bottom: 20px;
       overflow-y: scroll;
 
+      background-image: linear-gradient(95deg, #e33439 435px, #c22a2e 435px);
+
       animation-name: mainNavOpen;
       animation-duration: 0.5s;
       animation-timing-function: ease-out;
 
+      @media (max-width: $mobile-max-width) {
+        width: 100vw;
+      }
+
       .container {
-        @media (max-width: $mobile-max-width) {
+        @media (max-width: $nav-mob-max-width) {
           padding: 0;
         }
       }
@@ -45,7 +55,7 @@
   }
 
   .container {
-    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -61,7 +71,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     flex-direction: column;
 
     &--closed {
@@ -80,7 +90,7 @@
     }
   }
 
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: $nav-desk-min-width) {
     align-items: center;
   }
 }
@@ -94,16 +104,12 @@
   transition-property: background-color;
   transition-duration: $short-transition;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     width: 100%;
   }
 
-  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
     flex-grow: 1;
-  }
-
-  @media (min-width: $tablet-min-width) and (max-width: $tablet-middle-point) {
-    min-width: 200px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -159,7 +165,7 @@
       z-index: 7;
       overflow: hidden;
 
-      @media (min-width: $tablet-min-width) {
+      @media (min-width: $nav-desk-min-width) {
         animation-name: nestingListOpen;
         animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
@@ -167,7 +173,7 @@
     }
 
     .main-nav__nesting-item {
-      @media (min-width: $tablet-min-width) {
+      @media (min-width: $nav-desk-min-width) {
         animation-name: nestingItemsOpen;
         animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
@@ -186,14 +192,15 @@
 
   cursor: pointer;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     display: flex;
     align-items: center;
-    padding-left: 40px;
+
+    padding-left: 60px;
     padding-right: 40px;
   }
 
-  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
     display: block;
     padding-right: 20px;
     padding-left: 20px;
@@ -238,7 +245,7 @@
       background-size: 10px 8px;
       background-position: 0 0;
 
-      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
         position: absolute;
         top: 36px;
         margin-left: 7px;
@@ -251,7 +258,7 @@
   width: 100%;
   padding-bottom: 14px;
 
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: $nav-desk-min-width) {
     position: absolute;
     z-index: 6;
 
@@ -277,7 +284,7 @@
   transition-property: background-color;
   transition-duration: $short-transition;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $nav-mob-max-width) {
     padding-left: 60px;
   }
 
