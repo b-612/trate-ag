@@ -133,6 +133,19 @@
       width: 98%;
     }
 
+    @media (min-width: $tablet-min-width) {
+      z-index: 1;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tab-middle-min) {
+      bottom: -50px;
+    }
+
+    @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
+      top: 235px;
+      width: 940px;
+    }
+
     @media (min-width: $desktop-min-width) {
       bottom: -70px;
     }
@@ -148,9 +161,17 @@
     }
 
     @media (min-width: $tablet-min-width) {
-      top: 32px;
       text-align: center;
       transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      top: 13px;
+      max-width: 400px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      top: 32px;
     }
   }
 }

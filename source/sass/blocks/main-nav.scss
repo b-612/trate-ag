@@ -8,7 +8,7 @@
     position: fixed;
   }
 
-  @media (max-width: $nav-mob-max-width) {
+  @media (max-width: $tab-middle-min) {
     top: 0;
     z-index: 5;
 
@@ -40,7 +40,7 @@
       animation-timing-function: ease-out;
 
       .container {
-        @media (max-width: $nav-mob-max-width) {
+        @media (max-width: $tab-middle-min) {
           padding: 0;
         }
       }
@@ -52,7 +52,7 @@
   }
 
   .container {
-    @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
+    @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -68,7 +68,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $nav-mob-max-width) {
+  @media (max-width: $tab-middle-min) {
     flex-direction: column;
 
     &--closed {
@@ -87,7 +87,7 @@
     }
   }
 
-  @media (min-width: $nav-desk-min-width) {
+  @media (min-width: $tab-middle-max) {
     align-items: center;
   }
 }
@@ -101,11 +101,11 @@
   transition-property: background-color;
   transition-duration: $short-transition;
 
-  @media (max-width: $nav-mob-max-width) {
+  @media (max-width: $tab-middle-min) {
     width: 100%;
   }
 
-  @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
     flex-grow: 1;
   }
 
@@ -162,7 +162,7 @@
       z-index: 7;
       overflow: hidden;
 
-      @media (min-width: $nav-desk-min-width) {
+      @media (min-width: $tab-middle-max) {
         animation-name: nestingListOpen;
         animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
@@ -170,7 +170,7 @@
     }
 
     .main-nav__nesting-item {
-      @media (min-width: $nav-desk-min-width) {
+      @media (min-width: $tab-middle-max) {
         animation-name: nestingItemsOpen;
         animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
@@ -189,7 +189,7 @@
 
   cursor: pointer;
 
-  @media (max-width: $nav-mob-max-width) {
+  @media (max-width: $tab-middle-min) {
     display: flex;
     align-items: center;
 
@@ -197,7 +197,7 @@
     padding-right: 40px;
   }
 
-  @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
     display: block;
     padding-right: 20px;
     padding-left: 20px;
@@ -242,7 +242,7 @@
       background-size: 10px 8px;
       background-position: 0 0;
 
-      @media (min-width: $nav-desk-min-width) and (max-width: $tablet-max-width) {
+      @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
         position: absolute;
         top: 36px;
         margin-left: 7px;
@@ -255,7 +255,7 @@
   width: 100%;
   padding-bottom: 14px;
 
-  @media (min-width: $nav-desk-min-width) {
+  @media (min-width: $tab-middle-max) {
     position: absolute;
     z-index: 6;
 
@@ -281,7 +281,7 @@
   transition-property: background-color;
   transition-duration: $short-transition;
 
-  @media (max-width: $nav-mob-max-width) {
+  @media (max-width: $tab-middle-min) {
     padding-left: 60px;
   }
 

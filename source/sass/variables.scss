@@ -2,6 +2,8 @@
 $mobile-min-width: 320px;
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
+$tab-middle-min: 999px;
+$tab-middle-max: 1000px;
 $tablet-max-width: 1339px;
 $desktop-min-width: 1340px;
 $desktop-max-width: 1920px;
@@ -73,8 +75,6 @@ $main-nav-fc-active: #faacae;
 $main-nav-item-bg-hover: #c22a2e;
 $main-nav-nest-item-hover: #e33439;
 $main-nav-nesting-lh: 1.4;
-$nav-mob-max-width: 999px;
-$nav-desk-min-width: 1000px;
 
 /* Примеры имплантов в шапке */
 $implant-fs: 16px;

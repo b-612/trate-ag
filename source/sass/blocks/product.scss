@@ -14,19 +14,34 @@
     width: 280px;
   }
 
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 355px;
+  }
+
+  @media (min-width: $desktop-min-width) {
     width: 405px;
   }
 
   &--big {
-    @media (min-width: $tablet-min-width) {
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      min-height: 510px;
+    }
+
+    @media (min-width: $desktop-min-width) {
       min-height: 580px;
     }
 
     .product__text-wrapper {
       @media (min-width: $tablet-min-width) {
-        min-height: 580px;
         padding-top: 64px;
+      }
+
+      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        min-height: 510px;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        min-height: 580px;
       }
     }
 
@@ -48,8 +63,18 @@
           top: 50%;
           left: 25%;
 
-          max-width: 180px;
+          max-width: 130px;
           transform: translate(-50%, -52%);
+        }
+
+        @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+          left: 22%;
+        }
+
+        @media (min-width: $desktop-min-width) {
+          left: 25%;
+
+          max-width: 180px;
         }
       }
     }
@@ -57,15 +82,30 @@
 
   &--small {
     @media (min-width: $tablet-min-width) {
-      min-height: 280px;
       margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      min-height: 245px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      min-height: 280px;
     }
 
     .product__text-wrapper {
       @media (min-width: $tablet-min-width) {
         width: 216px;
+      }
+
+      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        min-height: 245px;
+        padding-top: 20px;
+        padding-left: 20px;
+      }
+
+      @media (min-width: $desktop-min-width) {
         min-height: 280px;
-        margin-left: 192px;
         padding-top: 27px;
         padding-left: 26px;
       }
@@ -78,7 +118,11 @@
     }
 
     .product__order {
-      @media (min-width: $tablet-min-width) {
+      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        margin-top: 10px;
+      }
+
+      @media (min-width: $desktop-min-width) {
         margin-top: 21px;
       }
     }
@@ -87,9 +131,16 @@
       &--detail {
         @media (min-width: $tablet-min-width) {
           top: 46%;
-          left: 25%;
 
           transform: translate(-50%, -50%);
+        }
+
+        @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+          left: 20%;
+        }
+
+        @media (min-width: $desktop-min-width) {
+          left: 25%;
         }
       }
     }
@@ -120,7 +171,7 @@
 
   @media (min-width: $tablet-min-width) {
     width: 206px;
-    margin-left: 199px;
+    margin-left: auto;
     padding-left: 22px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -181,6 +232,13 @@
 
   @media (min-width: $tablet-min-width) {
     margin-top: 16px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-min-width) {
     margin-bottom: 25px;
   }
 
