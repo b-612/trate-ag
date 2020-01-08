@@ -12,8 +12,18 @@
     min-height: 355px;
 
     background-size: 250px auto;
-    background-position: 15px 15px;
+  }
+
+  @media (max-width: $tablet-max-width) {
     background-color: $news-item-hover-bg;
+    background-position: 15px 15px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 345px;
+    min-height: 324px;
+
+    background-size: 315px auto;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -63,6 +73,12 @@
 
   @media (max-width: $mobile-max-width) {
     margin-top: 125px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-top: 139px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-min-width) {

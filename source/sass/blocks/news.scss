@@ -1,7 +1,7 @@
 .news {
   background-color: $news-bg;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $tablet-max-width) {
     padding-top: 35px;
   }
 
@@ -28,6 +28,10 @@
     width: 280px;
   }
 
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 728px;
+  }
+
   .swiper-slide {
     display: flex;
   }
@@ -36,6 +40,11 @@
 .news__list {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    justify-content: space-around;
+    width: 728px;
+  }
 
   @media (min-width: $desktop-min-width) {
     max-height: 800px;

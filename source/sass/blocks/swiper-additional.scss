@@ -138,7 +138,7 @@
     }
 
     @media (min-width: $tablet-min-width) and (max-width: $tab-middle-min) {
-      bottom: -50px;
+      top: -90px;
     }
 
     @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
@@ -208,7 +208,7 @@
 
     @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
       width: 940px;
-      top: 42px;
+      top: 110px;
     }
 
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-desk-point) {
@@ -248,6 +248,19 @@
       width: 100%;
       top: -80px;
       left: 50%;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      z-index: 0;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tab-middle-min) {
+      top: -85px;
+    }
+
+    @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
+      width: 940px;
+      top: 120px;
     }
 
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-desk-point) {

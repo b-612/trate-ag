@@ -10,6 +10,8 @@
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     width: 345px;
+
+    background-size: 345px auto;
   }
 
   @media (min-width: $desktop-min-width) {
