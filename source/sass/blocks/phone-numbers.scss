@@ -19,9 +19,12 @@
 
 .phone-numbers__item {
   @media (max-width: $mobile-max-width) {
+    max-width: 280px;
     flex-shrink: 0;
     margin-left: 10px;
     margin-right: 10px;
+
+    text-align: center;
   }
 }
 

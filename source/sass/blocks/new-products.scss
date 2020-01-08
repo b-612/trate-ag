@@ -69,11 +69,13 @@
 }
 
 .new-products__link {
+  border-bottom: 2px dotted;
+
   font-family: $daxline-pro;
   line-height: $new-prod-link-lh;
   color: $new-prod-link-fc;
+  word-break: break-word;
 
-  border-bottom: 2px dotted;
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 25px;

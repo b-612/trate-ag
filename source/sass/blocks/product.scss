@@ -217,6 +217,7 @@
 
 .product__description {
   font-size: $product-text-fs;
+  word-break: break-word;
 
   transition-property: color;
   transition-duration: $short-transition;
@@ -251,6 +252,7 @@
   display: block;
 
   font-size: $product-text-fs;
+  word-break: break-word;
 
   transition-property: color;
   transition-duration: $short-transition;

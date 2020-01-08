@@ -180,6 +180,8 @@
   overflow: visible;
 
   .swiper-arrows {
+    z-index: 0;
+
     @media (max-width: $events-middle-mob-point) {
       top: -90px;
       width: 108%;

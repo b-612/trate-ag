@@ -75,6 +75,7 @@
   font-weight: normal;
   font-style: normal;
   color: $main-title-fc;
+  word-break: break-word;
 
   @media (max-width: $mobile-max-width) {
     margin-top: 0;
@@ -138,6 +139,7 @@
   color: $request-fc;
   text-decoration: underline;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     margin-top: 20px;

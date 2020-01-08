@@ -8,7 +8,7 @@
 
     @media (max-width: $mobile-max-width) {
       padding-top: 10px;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
     }
 
     @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -46,6 +46,10 @@
 }
 
 .top-line__account-item {
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 5px;
+  }
+
   &:not(:last-of-type) {
     position: relative;
 

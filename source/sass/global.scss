@@ -72,6 +72,7 @@ img {
   font-family: $daxline-pro;
   font-weight: normal;
   line-height: $section-title-lh;
+  word-break: break-word;
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 20px;

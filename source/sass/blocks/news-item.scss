@@ -71,6 +71,8 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  word-break: break-word;
+
   @media (max-width: $mobile-max-width) {
     margin-top: 125px;
   }

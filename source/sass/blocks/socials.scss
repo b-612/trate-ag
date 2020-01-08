@@ -5,6 +5,10 @@
 }
 
 .socials__item {
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 5px;
+  }
+
   &:not(:first-of-type):not(:nth-of-type(12n)) {
     @media (max-width: $mobile-max-width) {
       margin-left: 5px;
