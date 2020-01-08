@@ -44,14 +44,18 @@
 
   @media (min-width: $tablet-min-width) {
     justify-content: space-between;
-    align-items: baseline;
     max-width: 456px;
     margin-bottom: 28px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    align-items: center;
   }
 }
 
 .new-products__product {
   @media (min-width: $desktop-min-width) {
+    align-items: baseline;
     margin-right: 32px;
   }
 }

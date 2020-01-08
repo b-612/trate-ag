@@ -7,6 +7,13 @@
   font-size: $admin-content-fs;
   line-height: $admin-content-lh;
   color: $admin-content-fc;
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    align-items: center;
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .admin-content__wrapper {
@@ -14,12 +21,22 @@
     width: 100%;
   }
 
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 406px;
   }
 
+  &:first-of-type {
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      margin-right: 30px;
+    }
+  }
+
   &:not(:nth-of-type(3n)) {
-    @media (min-width: $tablet-min-width) {
+    @media (min-width: $desktop-min-width) {
       margin-right: 30px;
     }
   }
@@ -33,6 +50,11 @@
     width: 100%;
     height: 52vw;
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 294px;
+    height: 165px;
   }
 }
 

@@ -1,7 +1,10 @@
 .about {
   @media (max-width: $mobile-max-width) {
-    padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 35px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -24,6 +27,10 @@
 
   color: $about-title-fc;
   text-align: center;
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: $desktop-min-width) {
     width: 1120px;
