@@ -8,6 +8,10 @@
     background-size: 100% auto;
   }
 
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 345px;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 628px;
 
@@ -28,6 +32,10 @@
 
   transition-property: color;
   transition-duration: $short-transition;
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    padding-top: 1px;
+  }
 
   &:hover,
   &:focus {
@@ -57,6 +65,25 @@
 
   transition-property: background-color;
   transition-duration: $short-transition;
+
+  @media (max-width: $mobile-max-width) {
+    width: 280px;
+    min-height: 160px;
+    margin-top: 104px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    min-height: 157px;
+    margin-top: 127px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
 
   @media (min-width: $desktop-min-width) {
     width: 216px;

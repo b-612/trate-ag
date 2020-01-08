@@ -186,7 +186,6 @@
     }
 
     @media (max-width: $mobile-max-width) {
-
       left: 50%;
       z-index: 2;
     }
@@ -195,6 +194,21 @@
       top: 80px;
 
       width: 400px;
+    }
+
+    @media (min-width: $tablet-min-width) {
+      z-index: 0;
+    }
+
+    @media (min-width: $tablet-min-width) and (max-width: $tab-middle-min) {
+      top: -78px;
+
+      width: 90%;
+    }
+
+    @media (min-width: $tab-middle-max) and (max-width: $tablet-max-width) {
+      width: 940px;
+      top: 42px;
     }
 
     @media (min-width: $desktop-min-width) and (max-width: $min-slider-desk-point) {
