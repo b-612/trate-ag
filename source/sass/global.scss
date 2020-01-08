@@ -30,21 +30,6 @@ img {
   height: auto;
 }
 
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
-
 .default-list {
   margin-top: 0;
   margin-bottom: 0;
@@ -84,24 +69,10 @@ img {
   @media (min-width: $tablet-min-width) {
     font-size: $section-title-fs;
   }
-}
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 4;
-
-  width: 100%;
-  height: 1000%;
-
-  background-color: rgba(0, 0, 0, 0.5);
-
-  &--hidden {
-    display: none;
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-.hidden {
-  display: none !important;
 }

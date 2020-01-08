@@ -145,6 +145,7 @@
   color: $footer-fc;
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    max-width: 280px;
     margin-right: 30px;
     margin-bottom: 20px;
   }
@@ -163,6 +164,7 @@
   }
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    max-width: 250px;
     margin-bottom: 20px;
   }
 

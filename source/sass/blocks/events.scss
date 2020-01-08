@@ -55,6 +55,7 @@
 .events__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     justify-content: space-around;

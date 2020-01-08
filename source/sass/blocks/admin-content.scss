@@ -7,6 +7,7 @@
   font-size: $admin-content-fs;
   line-height: $admin-content-lh;
   color: $admin-content-fc;
+  word-break: break-word;
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     align-items: center;

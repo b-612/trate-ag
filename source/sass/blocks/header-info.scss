@@ -142,6 +142,7 @@
   word-break: break-word;
 
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    max-width: 200px;
     margin-top: 20px;
     margin-right: auto;
   }
