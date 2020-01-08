@@ -4,7 +4,7 @@
   var COUNTER_INCR = 3;
 
   var containerClass = 'events__slider';
-  var listClass = 'events-slider__list';
+  var listClass = 'events__slider-list';
 
   var eventTemplate = document.querySelector('#event');
   var eventExample = eventTemplate.content.querySelector('.event');

@@ -13,7 +13,6 @@ var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
-var uncss = require('gulp-uncss');
 var jsminify = require('gulp-minify');
 var flatten = require('gulp-flatten');
 var server = require('browser-sync').create();
@@ -46,9 +45,6 @@ gulp.task('css', function () {
         .pipe(plumber())
         .pipe(sourcemap.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        // .pipe(uncss({
-        //   html: ['source/**/*.html']
-        // }))
         .pipe(postcss([
             autoprefixer()
         ]))
@@ -134,9 +130,9 @@ gulp.task('build', gulp.series(
     'clean',
     'copyfonts',
     'copyhtml',
-    'css',
     'images',
     'svgsprite',
+    'css',
     'webp',
     'jsmin'
 ));

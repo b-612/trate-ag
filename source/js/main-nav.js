@@ -153,6 +153,13 @@
     if (evt.currentTarget.classList.contains('main-nav__item--list')) {
       var nestingList = evt.currentTarget.querySelector('.main-nav__nesting-list');
       var items = Array.from(nestingList.querySelectorAll('.main-nav__nesting-item'));
+
+      if (screen.width > window.util.MOBILE_MAX_WIDTH && screen.width < window.util.DESKTOP_MIN_WIDTH) {
+        nestingLists.forEach(function (it) {
+          it.classList.add('visually-hidden');
+        });
+      }
+
       nestingList.classList.remove('visually-hidden');
 
       if (screen.width <= window.util.TABLET_MAX_WIDTH) {
@@ -222,14 +229,14 @@
 
   var addMobileListeners = function () {
     itemsLists.forEach(function (current) {
-      current.addEventListener('click', onItemClickMobile);
+      current.addEventListener('mousedown', onItemClickMobile);
       current.addEventListener('focusin', onItemFocusMobile);
     });
   };
 
   var removeMobileListeners = function () {
     itemsLists.forEach(function (current) {
-      current.removeEventListener('click', onItemClickMobile);
+      current.removeEventListener('mousedown', onItemClickMobile);
       current.removeEventListener('focusin', onItemFocusMobile);
     });
   };
