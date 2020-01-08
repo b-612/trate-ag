@@ -20,7 +20,7 @@
   }
 
   &:not(:nth-of-type(4n)) {
-    @media (min-width: $desktop-min-width) {
+    @media (min-width: $tablet-min-width) {
       margin-right: 30px;
     }
   }
@@ -44,6 +44,10 @@
 
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      margin-bottom: 20px;
+    }
 
     @media (min-width: $desktop-min-width) {
       margin-bottom: 41px;

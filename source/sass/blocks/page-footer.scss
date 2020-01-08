@@ -5,7 +5,7 @@
 
   background-color: $footer-bg;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $tablet-max-width) {
     padding-top: 25px;
     padding-bottom: 30px;
   }
@@ -31,6 +31,12 @@
     margin-right: auto;
   }
 
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 188px;
     margin-bottom: 20px;
@@ -47,6 +53,13 @@
       margin-bottom: 20px;
     }
 
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
     @media (min-width: $desktop-min-width) {
       display: flex;
       flex-direction: column;
@@ -59,7 +72,14 @@
   }
 
   &--info {
-    @media (min-width: $tablet-min-width) {
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @media (min-width: $desktop-min-width) {
       width: 196px;
     }
   }
@@ -70,7 +90,11 @@
     margin-bottom: 15px;
   }
 
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-min-width) {
     margin-bottom: 30px;
   }
 }
@@ -89,6 +113,15 @@
 }
 
 .page-footer__nav {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: center;
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
   @media (min-width: $desktop-min-width) {
     margin-right: 24px;
   }
@@ -97,6 +130,11 @@
 .page-footer__phone-numbers {
   margin-bottom: 12px;
 
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
   .phone-numbers__link {
     color: $footer-phone-link-fc;
   }
@@ -104,6 +142,11 @@
 
 .page-footer__button {
   color: $footer-fc;
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
 
   @media (min-width: $desktop-min-width) {
     max-width: 188px;
@@ -116,6 +159,10 @@
   @media (max-width: $mobile-max-width) {
     justify-content: flex-start;
     margin-top: 10px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-min-width) {
