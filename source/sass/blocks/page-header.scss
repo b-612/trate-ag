@@ -35,3 +35,14 @@
     }
   }
 }
+
+.page-header__examples {
+  @media (max-width: $mobile-max-width) {
+    margin-left: -15px;
+  }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

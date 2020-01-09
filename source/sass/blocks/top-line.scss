@@ -112,13 +112,4 @@
 
 .top-line__socials {
   margin-left: auto;
-
-  @media (max-width: $mobile-max-width) {
-    justify-content: flex-end;
-    width: 48%;
-  }
-
-  @media (min-width: $desktop-min-width) {
-    max-width: 406px;
-  }
 }

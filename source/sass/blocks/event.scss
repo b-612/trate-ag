@@ -19,12 +19,6 @@
 
     background-size: 628px 233px;
   }
-
-  &:not(:last-child) {
-    @media (min-width: $desktop-min-width) {
-      margin-right: 24px;
-    }
-  }
 }
 
 .event__link {

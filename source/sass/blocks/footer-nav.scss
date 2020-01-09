@@ -2,6 +2,12 @@
   @media (max-width: $mobile-max-width) {
     display: none;
   }
+
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: center;
+    width: 728px;
+  }
 }
 
 .footer-nav__list {

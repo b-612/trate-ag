@@ -19,6 +19,7 @@
   }
 
   @media (min-width: $desktop-min-width) {
+    align-items: baseline;
     width: 405px;
   }
 
@@ -322,7 +323,7 @@
     content: "";
 
     position: absolute;
-    top: 11px;
+    top: 8px;
     left: 15px;
 
     flex-shrink: 0;
@@ -330,7 +331,7 @@
     width: 22px;
     height: 19px;
 
-    background-image: url("../../img/basket.svg");
+    background-image: url("../img/basket.svg");
     background-repeat: no-repeat;
     background-size: 22px 57px;
     background-position: 0 0;

@@ -17,6 +17,14 @@
   }
 }
 
+.events__event {
+  &:not(:last-child) {
+    @media (min-width: $desktop-min-width) {
+      margin-right: 24px;
+    }
+  }
+}
+
 .events__title {
   color: $events-title-fc;
   text-align: center;

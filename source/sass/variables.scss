@@ -1,4 +1,3 @@
-/* Ширины дисплеев */
 $mobile-min-width: 320px;
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
@@ -8,19 +7,15 @@ $tablet-max-width: 1339px;
 $desktop-min-width: 1340px;
 $desktop-max-width: 1920px;
 
-/* Ретина */
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-/* Шрифты */
 $daxline-pro: "DaxlinePro", "Helevatica", "Arial", sans-serif;
 $roboto-bold: "Roboto Bold", "Helevatica", "Arial", sans-serif;
 $roboto-regular: "Roboto", "Helevatica", "Arial", sans-serif;
 
-/* Переходы */
 $short-transition: 0.3s;
 
-/* Глобальная область */
 $body-fs: 14px;
 $body-lh: 1.5;
 $body-fc: #323232;
@@ -31,22 +26,18 @@ $section-title-fs: 38px;
 $section-title-fs-m: 32px;
 $section-title-lh: 1.2;
 
-/* Верхняя полоса хедера */
 $top-line-bg: #ececec;
 $account-fc: #a6a7b1;
 $account-fc-hover: #e33439;
 $account-fs: 14px;
 $account-lh: 1.2;
 
-/* Иконки соц. сетей */
 $socials-shadow-color: #e33439;
 
-/* Инфо блок в хедере */
 $main-title-fs: 16px;
 $main-title-fc: #a6a7a1;
 $main-title-lh: 1.2;
 
-/* Кнопка (ссылка) с обводкой */
 $button-fs: 16px;
 $button-fc: #323232;
 $button-fc-hover: #ffffff;
@@ -55,18 +46,15 @@ $button-border-color: #e33439;
 $button-bg-hover: #e33439;
 $button-bg-active: #d4262b;
 
-/* Номера телефонов */
 $phone-fs: 22px;
 $phone-lh: 1.2;
 $phone-fc: #323232;
 
-/* Оформить заявку */
 $request-fs: 16px;
 $request-lh: 1.2;
 $request-fc: #e33439;
 $request-fc-hover: #323232;
 
-/* Главное меню */
 $main-nav-bg: #e33439;
 $main-nav-fs: 16px;
 $main-nav-lh: 1.2;
@@ -77,7 +65,6 @@ $main-nav-nest-item-hover: #e33439;
 $main-nav-nesting-lh: 1.4;
 $main-nav-grbg: 450px;
 
-/* Примеры имплантов в шапке */
 $implant-fs: 16px;
 $implant-lh: 1.5;
 $rootform-color: #9ebf56;
@@ -93,7 +80,6 @@ $examples-fc-hover: #323232;
 $examples-fc-active: #bcbcbc;
 $implant-border-fc: #efefef;
 
-/* Слайдер предложений */
 $slide-title-fs-td: 44px;
 $slide-title-fs-m: 25px;
 $slide-lh: 1.4;
@@ -109,7 +95,6 @@ $offers-link-fc-m: #ffffff;
 $offers-link-bg-m: #e33439;
 $offers-link-hover-bg-m: #c22a2e;
 
-/* Новинки */
 $new-prod-title-fc: #0d0d14;
 $new-prod-link-fs: 28px;
 $new-prod-link-fs-m: 24px;
@@ -118,7 +103,6 @@ $new-prod-link-fc: #e33439;
 $new-prod-link-hover-fc: #c22a2e;
 $new-prod-section-background: #f0f0f0;
 
-/* Карточка продукта в новых продуктах */
 $product-bg: #ffffff;
 $product-title-fc: #0d0d14;
 $product-title-small-fs-d: 22px;
@@ -134,12 +118,10 @@ $product-order-hover-bg: #e33439;
 $product-cat-link-hover-fc: #0d0d14;
 $product-text-wrapper-bg: rgba(255, 255, 255, 0.9);
 
-/* Ближайшие мероприятия */
 $events-middle-mob-point: 440px;
 $events-bg: #9293a6;
 $events-title-fc: #ffffff;
 
-/* Мероприятие отдельно */
 $event-bg: #e9e9ea;
 $event-info-bg: rgba(255, 255, 255, 0.9);
 $event-info-hover-bg: #e33439;
@@ -151,10 +133,8 @@ $event-link-hover-fc: #ffffff;
 $event-title-fs: 18px;
 $event-desc-lh: 1.4;
 
-/* О компании */
 $about-title-fc: #0d0d14;
 
-/* Контент из админки */
 $content-list-big-fs: 24px;
 $content-list-big-lh: 1;
 $content-list-small-lh: 1;
@@ -166,7 +146,6 @@ $admin-content-link-fc: #e43237;
 $admin-content-link-hover-fc: #c22a2e;
 $admin-content-link-active-fc: #a6a7a1;
 
-/* Новости */
 $news-bg: #dfe4eb;
 $news-fc: #323232;
 $news-item-hover-bg: #eef0f4;
@@ -175,7 +154,6 @@ $news-title-lh: 1.3;
 $news-title-hover-fc: #e43237;
 $news-title-active-fc: #c22a2e;
 
-/* Футер */
 $footer-bg: #2a3236;
 $footer-fc: #ffffff;
 $footer-fs: 16px;

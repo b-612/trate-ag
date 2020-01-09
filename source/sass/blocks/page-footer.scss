@@ -128,9 +128,6 @@
 
 .page-footer__nav {
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-    display: flex;
-    justify-content: center;
-    width: 728px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;

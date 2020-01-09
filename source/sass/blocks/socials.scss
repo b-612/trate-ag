@@ -2,6 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+
+  @media (max-width: $mobile-max-width) {
+    justify-content: flex-end;
+    width: 48%;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    max-width: 406px;
+  }
 }
 
 .socials__item {
