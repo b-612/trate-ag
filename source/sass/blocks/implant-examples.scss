@@ -141,7 +141,7 @@
 }
 
 .implant-examples__title {
-  max-width: 170px;
+  max-width: 200px;
 
   font-family: $daxline-pro;
   font-size: $implant-fs;
@@ -158,6 +158,11 @@
 
   @media (min-width: $tablet-min-width) {
     margin-top: 13px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 185px;
+    text-align: center;
   }
 }
 
